@@ -167,6 +167,24 @@
     <Compile Include="ItemPrice.Designer.cs">
       <DependentUpon>ItemPrice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Old report\CR_Bill1.cs">
+      <DependentUpon>CR_Bill1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Old report\CR_Bill_Sale1.cs">
+      <DependentUpon>CR_Bill_Sale1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Old report\CR_ChallanNote1.cs">
+      <DependentUpon>CR_ChallanNote1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="TaxAmount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +276,18 @@
     <EmbeddedResource Include="ItemPrice.resx">
       <DependentUpon>ItemPrice.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old report\CR_Bill1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Bill1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old report\CR_Bill_Sale1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Bill_Sale1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Old report\CR_ChallanNote1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_ChallanNote1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TaxAmount.resx">
       <DependentUpon>TaxAmount.cs</DependentUpon>
@@ -426,6 +456,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

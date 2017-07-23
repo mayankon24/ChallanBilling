@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Billing {
+namespace Billing.Old_report {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace Billing {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CR_Bill_Sale : ReportClass {
+    public class CR_ChallanNote1 : ReportClass {
         
-        public CR_Bill_Sale() {
+        public CR_ChallanNote1() {
         }
         
         public override string ResourceName {
             get {
-                return "CR_Bill_Sale.rpt";
+                return "CR_ChallanNote1.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Billing {
         
         public override string FullResourceName {
             get {
-                return "Billing.CR_Bill_Sale.rpt";
+                return "Billing.Old report.CR_ChallanNote1.rpt";
             }
             set {
                 // Do nothing
@@ -74,7 +74,7 @@ namespace Billing {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection2 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,7 +82,7 @@ namespace Billing {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
             get {
                 return this.ReportDefinition.Sections[4];
             }
@@ -90,7 +90,7 @@ namespace Billing {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection2 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
             get {
                 return this.ReportDefinition.Sections[5];
             }
@@ -98,7 +98,7 @@ namespace Billing {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
             get {
                 return this.ReportDefinition.Sections[6];
             }
@@ -106,23 +106,7 @@ namespace Billing {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
-            get {
-                return this.ReportDefinition.Sections[7];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section5 {
-            get {
-                return this.ReportDefinition.Sections[8];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Tin_No {
+        public CrystalDecisions.Shared.IParameterField Parameter_Type {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -130,7 +114,7 @@ namespace Billing {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Order_No {
+        public CrystalDecisions.Shared.IParameterField Parameter_Tin_No {
             get {
                 return this.DataDefinition.ParameterFields[1];
             }
@@ -138,41 +122,17 @@ namespace Billing {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Order_Date {
+        public CrystalDecisions.Shared.IParameterField Parameter_JobWork_Narration {
             get {
                 return this.DataDefinition.ParameterFields[2];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Challan_NO {
-            get {
-                return this.DataDefinition.ParameterFields[3];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Challan_Date {
-            get {
-                return this.DataDefinition.ParameterFields[4];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Bill_Type {
-            get {
-                return this.DataDefinition.ParameterFields[5];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCR_Bill_Sale : Component, ICachedReport {
+    public class CachedCR_ChallanNote1 : Component, ICachedReport {
         
-        public CachedCR_Bill_Sale() {
+        public CachedCR_ChallanNote1() {
         }
         
         [Browsable(false)]
@@ -209,7 +169,7 @@ namespace Billing {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CR_Bill_Sale rpt = new CR_Bill_Sale();
+            CR_ChallanNote1 rpt = new CR_ChallanNote1();
             rpt.Site = this.Site;
             return rpt;
         }

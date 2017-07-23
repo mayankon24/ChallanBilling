@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Billing {
+namespace Billing.Old_report {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace Billing {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CR_Bill_Sale : ReportClass {
+    public class CR_Bill_Sale1 : ReportClass {
         
-        public CR_Bill_Sale() {
+        public CR_Bill_Sale1() {
         }
         
         public override string ResourceName {
             get {
-                return "CR_Bill_Sale.rpt";
+                return "CR_Bill_Sale1.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Billing {
         
         public override string FullResourceName {
             get {
-                return "Billing.CR_Bill_Sale.rpt";
+                return "Billing.Old report.CR_Bill_Sale1.rpt";
             }
             set {
                 // Do nothing
@@ -170,9 +170,9 @@ namespace Billing {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCR_Bill_Sale : Component, ICachedReport {
+    public class CachedCR_Bill_Sale1 : Component, ICachedReport {
         
-        public CachedCR_Bill_Sale() {
+        public CachedCR_Bill_Sale1() {
         }
         
         [Browsable(false)]
@@ -209,7 +209,7 @@ namespace Billing {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CR_Bill_Sale rpt = new CR_Bill_Sale();
+            CR_Bill_Sale1 rpt = new CR_Bill_Sale1();
             rpt.Site = this.Site;
             return rpt;
         }
