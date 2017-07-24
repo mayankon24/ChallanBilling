@@ -60,6 +60,7 @@ namespace PurchasesChallan
 
                     objItemNameEL.Item_id = (int)cmbItemName.SelectedValue;
                     objItemNameEL.Item_name = txtItemName.Text.Trim();
+                    objItemNameEL.HSN_Code = txtHSN.Text.Trim();
                     objItemNameEL.Item_name_description = txtDescription.Text.Trim();
                     objItemNameDL.Update(objItemNameEL);
 
@@ -92,6 +93,7 @@ namespace PurchasesChallan
                     ItemNameEL objItemNameEL = new ItemNameEL();
                     ItemNameDL objItemNameDL = new ItemNameDL();
                     objItemNameEL.Item_name = txtItemName.Text.Trim();
+                    objItemNameEL.HSN_Code = txtHSN.Text.Trim();
                     objItemNameEL.Item_name_description = txtDescription.Text.Trim();
                     objItemNameDL.Insert(objItemNameEL);
 
@@ -162,11 +164,13 @@ namespace PurchasesChallan
                 btnAdd.Visible = false;
                 btnUpdate.Visible = true;
                 txtDescription.Text = InputFieldEL.Item_name_description;
+                txtHSN.Text = InputFieldEL.HSN_Code;
 
             }
             else
             {
                 txtItemName.Text = "";
+                txtHSN.Text = "";
                 btnAdd.Visible = true;
                 btnUpdate.Visible = false;
                 txtDescription.Text = "";
@@ -175,6 +179,7 @@ namespace PurchasesChallan
         private void ClearControl()
         {
             txtItemName.Text = "";
+            txtHSN.Text = "";
             txtDescription.Text = "";
             btnAdd.Visible = true;
             btnUpdate.Visible = false;

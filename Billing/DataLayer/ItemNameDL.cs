@@ -19,7 +19,8 @@ namespace Billing.DataLayer
             try
             {
                 int Id = objSQLHelper.ExecuteInsertProcedure("InsertItemName", objSqlTransaction
-                                                         , objSQLHelper.SqlParam("@Item_Name", objItemNameEL.Item_name, SqlDbType.NVarChar)                                                                                                                 
+                                                         , objSQLHelper.SqlParam("@Item_Name", objItemNameEL.Item_name, SqlDbType.NVarChar)
+                                                         , objSQLHelper.SqlParam("@HSN_Code", objItemNameEL.HSN_Code, SqlDbType.NVarChar)
                                                        );
                 objSqlTransaction.Commit();
                 return true;
@@ -40,6 +41,7 @@ namespace Billing.DataLayer
             {
                 int Id = objSQLHelper.ExecuteUpdateProcedure("UpdateItemName", objSqlTransaction
                                                          , objSQLHelper.SqlParam("@Item_Name", objItemNameEL.Item_name, SqlDbType.NVarChar)
+                                                         , objSQLHelper.SqlParam("@HSN_Code", objItemNameEL.HSN_Code, SqlDbType.NVarChar)
                                                          , objSQLHelper.SqlParam("@Item_id", objItemNameEL.Item_id, SqlDbType.Int)
                                                        );
                 objSqlTransaction.Commit();
@@ -86,7 +88,8 @@ namespace Billing.DataLayer
                 {
                     objItemNameEL = new ItemNameEL();
                     objItemNameEL.Item_id = (int)dt.Rows[i]["Item_id"];
-                    objItemNameEL.Item_name = dt.Rows[i]["Item_name"].ToString();                                      
+                    objItemNameEL.Item_name = dt.Rows[i]["Item_name"].ToString();
+                    objItemNameEL.HSN_Code = dt.Rows[i]["HSN_Code"].ToString();
                     lstInputFieldEL.Add(objItemNameEL);
                 }
 
