@@ -53,7 +53,9 @@
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Item_Name" DataSetColumn="Item_Name" />
+              <Mapping SourceColumn="HSN_Code" DataSetColumn="HSN_Code" />
               <Mapping SourceColumn="Packaging_Description" DataSetColumn="Packaging_Description" />
+              <Mapping SourceColumn="Item_Rate" DataSetColumn="Item_Rate" />
               <Mapping SourceColumn="Deliver_Quantity" DataSetColumn="Deliver_Quantity" />
             </Mappings>
             <Sources />
@@ -124,13 +126,20 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GetReportBody" msprop:Generator_UserTableName="GetReportBody" msprop:Generator_RowEvArgName="GetReportBodyRowChangeEvent" msprop:Generator_TableVarName="tableGetReportBody" msprop:Generator_TablePropName="GetReportBody" msprop:Generator_RowDeletingName="GetReportBodyRowDeleting" msprop:Generator_RowChangingName="GetReportBodyRowChanging" msprop:Generator_RowDeletedName="GetReportBodyRowDeleted" msprop:Generator_RowEvHandlerName="GetReportBodyRowChangeEventHandler" msprop:Generator_TableClassName="GetReportBodyDataTable" msprop:Generator_RowChangedName="GetReportBodyRowChanged" msprop:Generator_RowClassName="GetReportBodyRow">
+        <xs:element name="GetReportBody" msprop:Generator_TableClassName="GetReportBodyDataTable" msprop:Generator_TableVarName="tableGetReportBody" msprop:Generator_TablePropName="GetReportBody" msprop:Generator_RowDeletingName="GetReportBodyRowDeleting" msprop:Generator_RowChangingName="GetReportBodyRowChanging" msprop:Generator_RowEvHandlerName="GetReportBodyRowChangeEventHandler" msprop:Generator_RowDeletedName="GetReportBodyRowDeleted" msprop:Generator_UserTableName="GetReportBody" msprop:Generator_RowChangedName="GetReportBodyRowChanged" msprop:Generator_RowEvArgName="GetReportBodyRowChangeEvent" msprop:Generator_RowClassName="GetReportBodyRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Item_Name" msprop:Generator_ColumnVarNameInTable="columnItem_Name" msprop:Generator_ColumnPropNameInRow="Item_Name" msprop:Generator_ColumnPropNameInTable="Item_NameColumn" msprop:Generator_UserColumnName="Item_Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="100" />
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HSN_Code" msprop:Generator_ColumnVarNameInTable="columnHSN_Code" msprop:Generator_ColumnPropNameInRow="HSN_Code" msprop:Generator_ColumnPropNameInTable="HSN_CodeColumn" msprop:Generator_UserColumnName="HSN_Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -141,6 +150,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="Item_Rate" msprop:Generator_ColumnVarNameInTable="columnItem_Rate" msprop:Generator_ColumnPropNameInRow="Item_Rate" msprop:Generator_ColumnPropNameInTable="Item_RateColumn" msprop:Generator_UserColumnName="Item_Rate" type="xs:double" minOccurs="0" />
               <xs:element name="Deliver_Quantity" msprop:Generator_ColumnVarNameInTable="columnDeliver_Quantity" msprop:Generator_ColumnPropNameInRow="Deliver_Quantity" msprop:Generator_ColumnPropNameInTable="Deliver_QuantityColumn" msprop:Generator_UserColumnName="Deliver_Quantity" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>

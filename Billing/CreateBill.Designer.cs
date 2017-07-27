@@ -121,17 +121,19 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1012, 701);
+            this.panel1.Size = new System.Drawing.Size(1349, 863);
             this.panel1.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.AccessibleName = "WhiteColor";
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 9);
+            this.label7.Location = new System.Drawing.Point(25, 11);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.Size = new System.Drawing.Size(48, 17);
             this.label7.TabIndex = 87;
             this.label7.Text = "Bill No";
             // 
@@ -142,17 +144,19 @@
             this.lblBillNo.BackColor = System.Drawing.Color.Maroon;
             this.lblBillNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBillNo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblBillNo.Location = new System.Drawing.Point(19, 30);
+            this.lblBillNo.Location = new System.Drawing.Point(25, 37);
+            this.lblBillNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBillNo.Name = "lblBillNo";
-            this.lblBillNo.Size = new System.Drawing.Size(41, 13);
+            this.lblBillNo.Size = new System.Drawing.Size(52, 17);
             this.lblBillNo.TabIndex = 84;
             this.lblBillNo.Text = "bill no";
             // 
             // textInvoiceNo
             // 
-            this.textInvoiceNo.Location = new System.Drawing.Point(62, 9);
+            this.textInvoiceNo.Location = new System.Drawing.Point(83, 11);
+            this.textInvoiceNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textInvoiceNo.Name = "textInvoiceNo";
-            this.textInvoiceNo.Size = new System.Drawing.Size(124, 20);
+            this.textInvoiceNo.Size = new System.Drawing.Size(164, 22);
             this.textInvoiceNo.TabIndex = 86;
             // 
             // splitContainer2
@@ -160,7 +164,8 @@
             this.splitContainer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer2.Location = new System.Drawing.Point(11, 65);
+            this.splitContainer2.Location = new System.Drawing.Point(15, 80);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -171,14 +176,16 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer2.Size = new System.Drawing.Size(990, 529);
-            this.splitContainer2.SplitterDistance = 211;
+            this.splitContainer2.Size = new System.Drawing.Size(1320, 651);
+            this.splitContainer2.SplitterDistance = 259;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 83;
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -188,8 +195,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(990, 211);
-            this.splitContainer1.SplitterDistance = 499;
+            this.splitContainer1.Size = new System.Drawing.Size(1320, 259);
+            this.splitContainer1.SplitterDistance = 665;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 80;
             // 
             // groupBox1
@@ -197,8 +205,10 @@
             this.groupBox1.Controls.Add(this.grdPurchasesOrder);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(499, 211);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(665, 259);
             this.groupBox1.TabIndex = 77;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Purchases Order";
@@ -216,9 +226,10 @@
             this.Date,
             this.Purchases_Order_Id,
             this.ColBtnDetail});
-            this.grdPurchasesOrder.Location = new System.Drawing.Point(11, 24);
+            this.grdPurchasesOrder.Location = new System.Drawing.Point(15, 30);
+            this.grdPurchasesOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdPurchasesOrder.Name = "grdPurchasesOrder";
-            this.grdPurchasesOrder.Size = new System.Drawing.Size(476, 164);
+            this.grdPurchasesOrder.Size = new System.Drawing.Size(635, 201);
             this.grdPurchasesOrder.TabIndex = 0;
             this.grdPurchasesOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdPurchasesOrder_CellContentClick);
             this.grdPurchasesOrder.CurrentCellDirtyStateChanged += new System.EventHandler(this.grdPurchasesOrder_CurrentCellDirtyStateChanged);
@@ -262,8 +273,10 @@
             this.groupBox2.Controls.Add(this.grdChallan);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(487, 211);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(650, 259);
             this.groupBox2.TabIndex = 78;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Challan";
@@ -281,9 +294,10 @@
             this.Delivery_no,
             this.Delivery_Date,
             this.Delivery_Id});
-            this.grdChallan.Location = new System.Drawing.Point(12, 24);
+            this.grdChallan.Location = new System.Drawing.Point(16, 30);
+            this.grdChallan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdChallan.Name = "grdChallan";
-            this.grdChallan.Size = new System.Drawing.Size(464, 164);
+            this.grdChallan.Size = new System.Drawing.Size(620, 201);
             this.grdChallan.TabIndex = 80;
             this.grdChallan.CurrentCellDirtyStateChanged += new System.EventHandler(this.grdChallan_CurrentCellDirtyStateChanged);
             // 
@@ -324,8 +338,10 @@
             this.groupBox3.Controls.Add(this.grdItem);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(990, 314);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(1320, 387);
             this.groupBox3.TabIndex = 79;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Item Detail";
@@ -356,9 +372,10 @@
             this.Bill_Item_Id,
             this.Sub_Item,
             this.Narration});
-            this.grdItem.Location = new System.Drawing.Point(13, 24);
+            this.grdItem.Location = new System.Drawing.Point(17, 30);
+            this.grdItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(965, 280);
+            this.grdItem.Size = new System.Drawing.Size(1287, 346);
             this.grdItem.TabIndex = 0;
             this.grdItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdItem_CellContentClick);
             this.grdItem.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.grdItem_RowsAdded);
@@ -492,9 +509,11 @@
             this.groupBox4.Controls.Add(this.cmbBillType);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Location = new System.Drawing.Point(11, 600);
+            this.groupBox4.Location = new System.Drawing.Point(15, 738);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(990, 88);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(1320, 108);
             this.groupBox4.TabIndex = 82;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Create Bill";
@@ -503,36 +522,40 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(556, 20);
+            this.label3.Location = new System.Drawing.Point(741, 25);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.Size = new System.Drawing.Size(89, 17);
             this.label3.TabIndex = 100;
             this.label3.Text = "Tax Inclusive";
             // 
             // txtDiscount
             // 
             this.txtDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtDiscount.Location = new System.Drawing.Point(448, 42);
+            this.txtDiscount.Location = new System.Drawing.Point(597, 52);
+            this.txtDiscount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(100, 20);
+            this.txtDiscount.Size = new System.Drawing.Size(132, 22);
             this.txtDiscount.TabIndex = 99;
             // 
             // Discount
             // 
             this.Discount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Discount.AutoSize = true;
-            this.Discount.Location = new System.Drawing.Point(471, 20);
+            this.Discount.Location = new System.Drawing.Point(628, 25);
+            this.Discount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Discount.Name = "Discount";
-            this.Discount.Size = new System.Drawing.Size(49, 13);
+            this.Discount.Size = new System.Drawing.Size(63, 17);
             this.Discount.TabIndex = 98;
             this.Discount.Text = "Discount";
             // 
             // txtCartage
             // 
             this.txtCartage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtCartage.Location = new System.Drawing.Point(355, 42);
+            this.txtCartage.Location = new System.Drawing.Point(473, 52);
+            this.txtCartage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCartage.Name = "txtCartage";
-            this.txtCartage.Size = new System.Drawing.Size(80, 20);
+            this.txtCartage.Size = new System.Drawing.Size(105, 22);
             this.txtCartage.TabIndex = 96;
             // 
             // chkTaxInclusive
@@ -540,9 +563,10 @@
             this.chkTaxInclusive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkTaxInclusive.AutoSize = true;
             this.chkTaxInclusive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkTaxInclusive.Location = new System.Drawing.Point(580, 48);
+            this.chkTaxInclusive.Location = new System.Drawing.Point(773, 59);
+            this.chkTaxInclusive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkTaxInclusive.Name = "chkTaxInclusive";
-            this.chkTaxInclusive.Size = new System.Drawing.Size(15, 14);
+            this.chkTaxInclusive.Size = new System.Drawing.Size(18, 17);
             this.chkTaxInclusive.TabIndex = 91;
             this.chkTaxInclusive.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.chkTaxInclusive.UseVisualStyleBackColor = true;
@@ -551,9 +575,10 @@
             // 
             this.Cartage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Cartage.AutoSize = true;
-            this.Cartage.Location = new System.Drawing.Point(367, 20);
+            this.Cartage.Location = new System.Drawing.Point(489, 25);
+            this.Cartage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Cartage.Name = "Cartage";
-            this.Cartage.Size = new System.Drawing.Size(44, 13);
+            this.Cartage.Size = new System.Drawing.Size(58, 17);
             this.Cartage.TabIndex = 97;
             this.Cartage.Text = "Cartage";
             // 
@@ -564,17 +589,19 @@
             this.panel3.Controls.Add(this.btnUpdate);
             this.panel3.Controls.Add(this.btnCreateBill);
             this.panel3.Controls.Add(this.btnNewBill);
-            this.panel3.Location = new System.Drawing.Point(814, 14);
+            this.panel3.Location = new System.Drawing.Point(1085, 17);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(164, 66);
+            this.panel3.Size = new System.Drawing.Size(219, 81);
             this.panel3.TabIndex = 1;
             // 
             // btnUpdate
             // 
             this.btnUpdate.AccessibleName = "SetStyle1";
-            this.btnUpdate.Location = new System.Drawing.Point(51, 3);
+            this.btnUpdate.Location = new System.Drawing.Point(68, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(107, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(143, 28);
             this.btnUpdate.TabIndex = 94;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -584,8 +611,9 @@
             // 
             this.btnCreateBill.AccessibleName = "SetStyle1";
             this.btnCreateBill.Location = new System.Drawing.Point(-1, -1);
+            this.btnCreateBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreateBill.Name = "btnCreateBill";
-            this.btnCreateBill.Size = new System.Drawing.Size(107, 23);
+            this.btnCreateBill.Size = new System.Drawing.Size(143, 28);
             this.btnCreateBill.TabIndex = 81;
             this.btnCreateBill.Text = "Create Bill";
             this.btnCreateBill.UseVisualStyleBackColor = true;
@@ -594,9 +622,10 @@
             // btnNewBill
             // 
             this.btnNewBill.AccessibleName = "SetStyle1";
-            this.btnNewBill.Location = new System.Drawing.Point(-1, 25);
+            this.btnNewBill.Location = new System.Drawing.Point(-1, 31);
+            this.btnNewBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNewBill.Name = "btnNewBill";
-            this.btnNewBill.Size = new System.Drawing.Size(107, 23);
+            this.btnNewBill.Size = new System.Drawing.Size(143, 28);
             this.btnNewBill.TabIndex = 93;
             this.btnNewBill.Text = "New Bill";
             this.btnNewBill.UseVisualStyleBackColor = true;
@@ -612,39 +641,44 @@
             this.panel2.Controls.Add(this.lnkTaxEdit);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(635, 14);
+            this.panel2.Location = new System.Drawing.Point(832, 17);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(162, 68);
+            this.panel2.Size = new System.Drawing.Size(231, 84);
             this.panel2.TabIndex = 96;
             // 
             // txtTaxName
             // 
-            this.txtTaxName.Location = new System.Drawing.Point(18, 25);
+            this.txtTaxName.Location = new System.Drawing.Point(24, 31);
+            this.txtTaxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTaxName.Name = "txtTaxName";
-            this.txtTaxName.Size = new System.Drawing.Size(52, 20);
+            this.txtTaxName.Size = new System.Drawing.Size(68, 22);
             this.txtTaxName.TabIndex = 96;
             // 
             // txtTaxAmount
             // 
-            this.txtTaxAmount.Location = new System.Drawing.Point(95, 25);
+            this.txtTaxAmount.Location = new System.Drawing.Point(127, 31);
+            this.txtTaxAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTaxAmount.Name = "txtTaxAmount";
-            this.txtTaxAmount.Size = new System.Drawing.Size(44, 20);
+            this.txtTaxAmount.Size = new System.Drawing.Size(57, 22);
             this.txtTaxAmount.TabIndex = 95;
             // 
             // cmbTaxAmount
             // 
             this.cmbTaxAmount.FormattingEnabled = true;
-            this.cmbTaxAmount.Location = new System.Drawing.Point(18, 25);
+            this.cmbTaxAmount.Location = new System.Drawing.Point(4, 31);
+            this.cmbTaxAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbTaxAmount.Name = "cmbTaxAmount";
-            this.cmbTaxAmount.Size = new System.Drawing.Size(121, 21);
+            this.cmbTaxAmount.Size = new System.Drawing.Size(203, 24);
             this.cmbTaxAmount.TabIndex = 87;
             // 
             // lnkTaxEdit
             // 
             this.lnkTaxEdit.AutoSize = true;
-            this.lnkTaxEdit.Location = new System.Drawing.Point(15, 49);
+            this.lnkTaxEdit.Location = new System.Drawing.Point(20, 60);
+            this.lnkTaxEdit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lnkTaxEdit.Name = "lnkTaxEdit";
-            this.lnkTaxEdit.Size = new System.Drawing.Size(81, 13);
+            this.lnkTaxEdit.Size = new System.Drawing.Size(106, 17);
             this.lnkTaxEdit.TabIndex = 88;
             this.lnkTaxEdit.TabStop = true;
             this.lnkTaxEdit.Text = "Edit tax Amount";
@@ -653,18 +687,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(140, 28);
+            this.label5.Location = new System.Drawing.Point(207, 34);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(15, 13);
+            this.label5.Size = new System.Drawing.Size(20, 17);
             this.label5.TabIndex = 89;
             this.label5.Text = "%";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(92, 6);
+            this.label6.Location = new System.Drawing.Point(123, 7);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 13);
+            this.label6.Size = new System.Drawing.Size(31, 17);
             this.label6.TabIndex = 90;
             this.label6.Text = "Tax";
             // 
@@ -673,18 +709,20 @@
             this.datePkrBilldate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.datePkrBilldate.CustomFormat = "dd/MM/yyyy";
             this.datePkrBilldate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datePkrBilldate.Location = new System.Drawing.Point(13, 42);
+            this.datePkrBilldate.Location = new System.Drawing.Point(17, 52);
+            this.datePkrBilldate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datePkrBilldate.Name = "datePkrBilldate";
-            this.datePkrBilldate.Size = new System.Drawing.Size(149, 20);
+            this.datePkrBilldate.Size = new System.Drawing.Size(197, 22);
             this.datePkrBilldate.TabIndex = 85;
             // 
             // cmbBillType
             // 
             this.cmbBillType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cmbBillType.FormattingEnabled = true;
-            this.cmbBillType.Location = new System.Drawing.Point(168, 42);
+            this.cmbBillType.Location = new System.Drawing.Point(224, 52);
+            this.cmbBillType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbBillType.Name = "cmbBillType";
-            this.cmbBillType.Size = new System.Drawing.Size(167, 21);
+            this.cmbBillType.Size = new System.Drawing.Size(221, 24);
             this.cmbBillType.TabIndex = 84;
             this.cmbBillType.SelectedIndexChanged += new System.EventHandler(this.cmbBillType_SelectedIndexChanged);
             // 
@@ -692,9 +730,10 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(196, 20);
+            this.label4.Location = new System.Drawing.Point(261, 25);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(57, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Bill type";
             // 
@@ -702,9 +741,10 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 20);
+            this.label2.Location = new System.Drawing.Point(48, 25);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(38, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Date";
             // 
@@ -714,19 +754,21 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(477, 9);
+            this.label1.Location = new System.Drawing.Point(636, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 22);
+            this.label1.Size = new System.Drawing.Size(70, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
             // CreateBill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1012, 701);
+            this.ClientSize = new System.Drawing.Size(1349, 863);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CreateBill";
             this.Text = "Create Bill";
             this.panel1.ResumeLayout(false);

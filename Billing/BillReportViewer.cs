@@ -139,50 +139,51 @@ namespace Billing
             {
                 BillDL objBillDL = new BillDL();
                 DataSet ds = objBillDL.GetBillReportData(companyEL, billEL);
-               
 
-                if ((int)ds.Tables["GetBillReportHeader"].Rows[0]["Bill_Type_Id"] == (int)enumBillType.RetailInvoice_Jobwork || (int)ds.Tables["GetBillReportHeader"].Rows[0]["Bill_Type_Id"] == (int)enumBillType.TaxInvoice_Jobwork)
+
+                //if ((int)ds.Tables["GetBillReportHeader"].Rows[0]["Bill_Type_Id"] == (int)enumBillType.RetailInvoice_Jobwork 
+                //    || (int)ds.Tables["GetBillReportHeader"].Rows[0]["Bill_Type_Id"] == (int)enumBillType.TaxInvoice_Jobwork)
+                //{
+                //    objRpt = new CR_Bill();
+                //    objRpt.SetDataSource(ds);
+
+                //    objRpt.SetParameterValue("Order_No", PurchasesOrderNo.Substring(1));
+                //    objRpt.SetParameterValue("Order_Date", PurchasesOrderDate.Substring(1));
+                //    objRpt.SetParameterValue("Challan_NO", DeliveryNo.Substring(1));
+                //    objRpt.SetParameterValue("Challan_Date", DeliveryDate.Substring(1));
+                //    objRpt.SetParameterValue("Bill_Type", billType);
+
+                //    if (companyEL.Company_Type_Id == (int)enumCompanyType.Delhi)
+                //    {
+                //        objRpt.SetParameterValue("Tin_No", " 07050294694");
+                //    }
+                //    else if (companyEL.Company_Type_Id == (int)enumCompanyType.Noida)
+                //    {
+                //        objRpt.SetParameterValue("Tin_No", " 09165703716");
+                //    }                   
+                //    crystalReportViewer1.ReportSource = objRpt;
+                //}
+                //else
+                //{
+                objRptSale = new CR_Bill_Sale();
+                objRptSale.SetDataSource(ds);
+
+                objRptSale.SetParameterValue("Order_No", PurchasesOrderNo.Substring(1));
+                objRptSale.SetParameterValue("Order_Date", PurchasesOrderDate.Substring(1));
+                objRptSale.SetParameterValue("Challan_NO", DeliveryNo.Substring(1));
+                objRptSale.SetParameterValue("Challan_Date", DeliveryDate.Substring(1));
+                objRptSale.SetParameterValue("Bill_Type", billType);
+
+                if (companyEL.Company_Type_Id == (int)enumCompanyType.Delhi)
                 {
-                    objRpt = new CR_Bill();
-                    objRpt.SetDataSource(ds);
-
-                    objRpt.SetParameterValue("Order_No", PurchasesOrderNo.Substring(1));
-                    objRpt.SetParameterValue("Order_Date", PurchasesOrderDate.Substring(1));
-                    objRpt.SetParameterValue("Challan_NO", DeliveryNo.Substring(1));
-                    objRpt.SetParameterValue("Challan_Date", DeliveryDate.Substring(1));
-                    objRpt.SetParameterValue("Bill_Type", billType);
-
-                    if (companyEL.Company_Type_Id == (int)enumCompanyType.Delhi)
-                    {
-                        objRpt.SetParameterValue("Tin_No", " 07050294694");
-                    }
-                    else if (companyEL.Company_Type_Id == (int)enumCompanyType.Noida)
-                    {
-                        objRpt.SetParameterValue("Tin_No", " 09165703716");
-                    }                   
-                    crystalReportViewer1.ReportSource = objRpt;
+                    objRptSale.SetParameterValue("Tin_No", " 07050294694");
                 }
-                else
+                else if (companyEL.Company_Type_Id == (int)enumCompanyType.Noida)
                 {
-                    objRptSale = new CR_Bill_Sale();
-                    objRptSale.SetDataSource(ds);
-
-                    objRptSale.SetParameterValue("Order_No", PurchasesOrderNo.Substring(1));
-                    objRptSale.SetParameterValue("Order_Date", PurchasesOrderDate.Substring(1));
-                    objRptSale.SetParameterValue("Challan_NO", DeliveryNo.Substring(1));
-                    objRptSale.SetParameterValue("Challan_Date", DeliveryDate.Substring(1));
-                    objRptSale.SetParameterValue("Bill_Type", billType);
-
-                    if (companyEL.Company_Type_Id == (int)enumCompanyType.Delhi)
-                    {
-                        objRptSale.SetParameterValue("Tin_No", " 07050294694");
-                    }
-                    else if (companyEL.Company_Type_Id == (int)enumCompanyType.Noida)
-                    {
-                        objRptSale.SetParameterValue("Tin_No", " 09165703716");
-                    }                   
-                    crystalReportViewer1.ReportSource = objRptSale;
+                    objRptSale.SetParameterValue("Tin_No", " 09165703716");
                 }
+                crystalReportViewer1.ReportSource = objRptSale;
+                //}
             }
             catch (Exception ex)
             {
