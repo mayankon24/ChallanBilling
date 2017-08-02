@@ -57,5 +57,41 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\User Defined Types\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\UserTokenCaches.sql" />
+    <Build Include="dbo\Tables\M_Request.sql" />
+    <Build Include="dbo\Tables\M_ProcessActivity.sql" />
+    <Build Include="dbo\Tables\M_Process.sql" />
+    <Build Include="dbo\Tables\Lk_Tool_Host.sql" />
+    <Build Include="dbo\Tables\Lk_Tool.sql" />
+    <Build Include="dbo\Tables\Lk_Status.sql" />
+    <Build Include="dbo\Tables\Lk_Source.sql" />
+    <Build Include="dbo\Tables\Lk_Role.sql" />
+    <Build Include="dbo\Tables\Lk_Request_Type.sql" />
+    <Build Include="dbo\Tables\LK_Operation_Status.sql" />
+    <Build Include="dbo\Tables\LK_Feature.sql" />
+    <Build Include="dbo\Tables\Feature_Role_Permission.sql" />
+    <Build Include="dbo\Tables\ErrorLog.sql" />
+    <Build Include="dbo\Functions\f_split.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateProcessStatus.sql" />
+    <Build Include="dbo\Stored Procedures\InsertErrorLog.sql" />
+    <Build Include="dbo\Stored Procedures\GetUserPermission.sql" />
+    <Build Include="dbo\Stored Procedures\GetAuditReportByFilter.sql" />
+    <Build Include="dbo\Stored Procedures\GetAllTool_Host.sql" />
+    <Build Include="dbo\Stored Procedures\GetAllTool.sql" />
+    <Build Include="dbo\Stored Procedures\GetAllStatus.sql" />
+    <Build Include="dbo\Stored Procedures\GetAllSecurityGroup.sql" />
+    <Build Include="dbo\Stored Procedures\GetAllRequestType.sql" />
+    <Build Include="dbo\Stored Procedures\AddRequest.sql" />
+    <Build Include="dbo\User Defined Types\udt_Ids.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CompareLocal.scmp" />
   </ItemGroup>
 </Project>
