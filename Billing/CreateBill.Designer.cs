@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.lblBillNo = new System.Windows.Forms.Label();
@@ -71,6 +71,12 @@
             this.Sub_Item = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Narration = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtCentralTaxName = new System.Windows.Forms.TextBox();
+            this.txtCentralTaxAmount = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDiscount = new System.Windows.Forms.TextBox();
             this.Discount = new System.Windows.Forms.Label();
@@ -93,6 +99,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbCentralTaxAmount = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -107,6 +114,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdItem)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -121,9 +129,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1349, 863);
+            this.panel1.Size = new System.Drawing.Size(1554, 863);
             this.panel1.TabIndex = 0;
             // 
             // label7
@@ -154,7 +162,7 @@
             // textInvoiceNo
             // 
             this.textInvoiceNo.Location = new System.Drawing.Point(83, 11);
-            this.textInvoiceNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textInvoiceNo.Margin = new System.Windows.Forms.Padding(4);
             this.textInvoiceNo.Name = "textInvoiceNo";
             this.textInvoiceNo.Size = new System.Drawing.Size(164, 22);
             this.textInvoiceNo.TabIndex = 86;
@@ -165,7 +173,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer2.Location = new System.Drawing.Point(15, 80);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -176,7 +184,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer2.Size = new System.Drawing.Size(1320, 651);
+            this.splitContainer2.Size = new System.Drawing.Size(1525, 651);
             this.splitContainer2.SplitterDistance = 259;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 83;
@@ -185,7 +193,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -195,8 +203,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer1.Size = new System.Drawing.Size(1320, 259);
-            this.splitContainer1.SplitterDistance = 665;
+            this.splitContainer1.Size = new System.Drawing.Size(1525, 259);
+            this.splitContainer1.SplitterDistance = 768;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 80;
             // 
@@ -205,10 +213,10 @@
             this.groupBox1.Controls.Add(this.grdPurchasesOrder);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(665, 259);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(768, 259);
             this.groupBox1.TabIndex = 77;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Purchases Order";
@@ -227,9 +235,9 @@
             this.Purchases_Order_Id,
             this.ColBtnDetail});
             this.grdPurchasesOrder.Location = new System.Drawing.Point(15, 30);
-            this.grdPurchasesOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdPurchasesOrder.Margin = new System.Windows.Forms.Padding(4);
             this.grdPurchasesOrder.Name = "grdPurchasesOrder";
-            this.grdPurchasesOrder.Size = new System.Drawing.Size(635, 201);
+            this.grdPurchasesOrder.Size = new System.Drawing.Size(738, 201);
             this.grdPurchasesOrder.TabIndex = 0;
             this.grdPurchasesOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdPurchasesOrder_CellContentClick);
             this.grdPurchasesOrder.CurrentCellDirtyStateChanged += new System.EventHandler(this.grdPurchasesOrder_CurrentCellDirtyStateChanged);
@@ -273,10 +281,10 @@
             this.groupBox2.Controls.Add(this.grdChallan);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(650, 259);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(752, 259);
             this.groupBox2.TabIndex = 78;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Challan";
@@ -295,9 +303,9 @@
             this.Delivery_Date,
             this.Delivery_Id});
             this.grdChallan.Location = new System.Drawing.Point(16, 30);
-            this.grdChallan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdChallan.Margin = new System.Windows.Forms.Padding(4);
             this.grdChallan.Name = "grdChallan";
-            this.grdChallan.Size = new System.Drawing.Size(620, 201);
+            this.grdChallan.Size = new System.Drawing.Size(722, 201);
             this.grdChallan.TabIndex = 80;
             this.grdChallan.CurrentCellDirtyStateChanged += new System.EventHandler(this.grdChallan_CurrentCellDirtyStateChanged);
             // 
@@ -338,10 +346,10 @@
             this.groupBox3.Controls.Add(this.grdItem);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(1320, 387);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(1525, 387);
             this.groupBox3.TabIndex = 79;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Item Detail";
@@ -373,9 +381,9 @@
             this.Sub_Item,
             this.Narration});
             this.grdItem.Location = new System.Drawing.Point(17, 30);
-            this.grdItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grdItem.Margin = new System.Windows.Forms.Padding(4);
             this.grdItem.Name = "grdItem";
-            this.grdItem.Size = new System.Drawing.Size(1287, 346);
+            this.grdItem.Size = new System.Drawing.Size(1492, 346);
             this.grdItem.TabIndex = 0;
             this.grdItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdItem_CellContentClick);
             this.grdItem.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.grdItem_RowsAdded);
@@ -395,16 +403,16 @@
             // 
             // Delivery_no2
             // 
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delivery_no2.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delivery_no2.DefaultCellStyle = dataGridViewCellStyle3;
             this.Delivery_no2.HeaderText = "Delivery Nos";
             this.Delivery_no2.Name = "Delivery_no2";
             this.Delivery_no2.ReadOnly = true;
             // 
             // Item_Name
             // 
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Item_Name.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Item_Name.DefaultCellStyle = dataGridViewCellStyle4;
             this.Item_Name.HeaderText = "Item Name";
             this.Item_Name.Name = "Item_Name";
             this.Item_Name.ReadOnly = true;
@@ -497,6 +505,7 @@
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.panel4);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.txtDiscount);
             this.groupBox4.Controls.Add(this.Discount);
@@ -510,19 +519,82 @@
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Location = new System.Drawing.Point(15, 738);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Size = new System.Drawing.Size(1320, 108);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(1525, 108);
             this.groupBox4.TabIndex = 82;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Create Bill";
+            // 
+            // panel4
+            // 
+            this.panel4.AccessibleName = "StyleTransparent";
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.cmbCentralTaxAmount);
+            this.panel4.Controls.Add(this.txtCentralTaxName);
+            this.panel4.Controls.Add(this.txtCentralTaxAmount);
+            this.panel4.Controls.Add(this.linkLabel1);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Location = new System.Drawing.Point(802, 17);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(231, 84);
+            this.panel4.TabIndex = 97;
+            // 
+            // txtCentralTaxName
+            // 
+            this.txtCentralTaxName.Location = new System.Drawing.Point(23, 28);
+            this.txtCentralTaxName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCentralTaxName.Name = "txtCentralTaxName";
+            this.txtCentralTaxName.Size = new System.Drawing.Size(68, 22);
+            this.txtCentralTaxName.TabIndex = 96;
+            // 
+            // txtCentralTaxAmount
+            // 
+            this.txtCentralTaxAmount.Location = new System.Drawing.Point(126, 28);
+            this.txtCentralTaxAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCentralTaxAmount.Name = "txtCentralTaxAmount";
+            this.txtCentralTaxAmount.Size = new System.Drawing.Size(57, 22);
+            this.txtCentralTaxAmount.TabIndex = 95;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(20, 60);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(106, 17);
+            this.linkLabel1.TabIndex = 88;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Edit tax Amount";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(207, 34);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(20, 17);
+            this.label8.TabIndex = 89;
+            this.label8.Text = "%";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(123, 7);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 17);
+            this.label9.TabIndex = 90;
+            this.label9.Text = "Central Tax";
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(741, 25);
+            this.label3.Location = new System.Drawing.Point(644, 23);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 17);
@@ -532,8 +604,8 @@
             // txtDiscount
             // 
             this.txtDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtDiscount.Location = new System.Drawing.Point(597, 52);
-            this.txtDiscount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiscount.Location = new System.Drawing.Point(514, 52);
+            this.txtDiscount.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(132, 22);
             this.txtDiscount.TabIndex = 99;
@@ -542,7 +614,7 @@
             // 
             this.Discount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Discount.AutoSize = true;
-            this.Discount.Location = new System.Drawing.Point(628, 25);
+            this.Discount.Location = new System.Drawing.Point(545, 25);
             this.Discount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Discount.Name = "Discount";
             this.Discount.Size = new System.Drawing.Size(63, 17);
@@ -552,8 +624,8 @@
             // txtCartage
             // 
             this.txtCartage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtCartage.Location = new System.Drawing.Point(473, 52);
-            this.txtCartage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCartage.Location = new System.Drawing.Point(390, 52);
+            this.txtCartage.Margin = new System.Windows.Forms.Padding(4);
             this.txtCartage.Name = "txtCartage";
             this.txtCartage.Size = new System.Drawing.Size(105, 22);
             this.txtCartage.TabIndex = 96;
@@ -563,8 +635,8 @@
             this.chkTaxInclusive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkTaxInclusive.AutoSize = true;
             this.chkTaxInclusive.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkTaxInclusive.Location = new System.Drawing.Point(773, 59);
-            this.chkTaxInclusive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkTaxInclusive.Location = new System.Drawing.Point(676, 57);
+            this.chkTaxInclusive.Margin = new System.Windows.Forms.Padding(4);
             this.chkTaxInclusive.Name = "chkTaxInclusive";
             this.chkTaxInclusive.Size = new System.Drawing.Size(18, 17);
             this.chkTaxInclusive.TabIndex = 91;
@@ -575,7 +647,7 @@
             // 
             this.Cartage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Cartage.AutoSize = true;
-            this.Cartage.Location = new System.Drawing.Point(489, 25);
+            this.Cartage.Location = new System.Drawing.Point(406, 25);
             this.Cartage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Cartage.Name = "Cartage";
             this.Cartage.Size = new System.Drawing.Size(58, 17);
@@ -589,8 +661,8 @@
             this.panel3.Controls.Add(this.btnUpdate);
             this.panel3.Controls.Add(this.btnCreateBill);
             this.panel3.Controls.Add(this.btnNewBill);
-            this.panel3.Location = new System.Drawing.Point(1085, 17);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(1290, 17);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(219, 81);
             this.panel3.TabIndex = 1;
@@ -599,7 +671,7 @@
             // 
             this.btnUpdate.AccessibleName = "SetStyle1";
             this.btnUpdate.Location = new System.Drawing.Point(68, 4);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(143, 28);
             this.btnUpdate.TabIndex = 94;
@@ -611,7 +683,7 @@
             // 
             this.btnCreateBill.AccessibleName = "SetStyle1";
             this.btnCreateBill.Location = new System.Drawing.Point(-1, -1);
-            this.btnCreateBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreateBill.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreateBill.Name = "btnCreateBill";
             this.btnCreateBill.Size = new System.Drawing.Size(143, 28);
             this.btnCreateBill.TabIndex = 81;
@@ -623,7 +695,7 @@
             // 
             this.btnNewBill.AccessibleName = "SetStyle1";
             this.btnNewBill.Location = new System.Drawing.Point(-1, 31);
-            this.btnNewBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNewBill.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewBill.Name = "btnNewBill";
             this.btnNewBill.Size = new System.Drawing.Size(143, 28);
             this.btnNewBill.TabIndex = 93;
@@ -641,8 +713,8 @@
             this.panel2.Controls.Add(this.lnkTaxEdit);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(832, 17);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(1050, 17);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(231, 84);
             this.panel2.TabIndex = 96;
@@ -650,7 +722,7 @@
             // txtTaxName
             // 
             this.txtTaxName.Location = new System.Drawing.Point(24, 31);
-            this.txtTaxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTaxName.Margin = new System.Windows.Forms.Padding(4);
             this.txtTaxName.Name = "txtTaxName";
             this.txtTaxName.Size = new System.Drawing.Size(68, 22);
             this.txtTaxName.TabIndex = 96;
@@ -658,7 +730,7 @@
             // txtTaxAmount
             // 
             this.txtTaxAmount.Location = new System.Drawing.Point(127, 31);
-            this.txtTaxAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTaxAmount.Margin = new System.Windows.Forms.Padding(4);
             this.txtTaxAmount.Name = "txtTaxAmount";
             this.txtTaxAmount.Size = new System.Drawing.Size(57, 22);
             this.txtTaxAmount.TabIndex = 95;
@@ -667,7 +739,7 @@
             // 
             this.cmbTaxAmount.FormattingEnabled = true;
             this.cmbTaxAmount.Location = new System.Drawing.Point(4, 31);
-            this.cmbTaxAmount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTaxAmount.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTaxAmount.Name = "cmbTaxAmount";
             this.cmbTaxAmount.Size = new System.Drawing.Size(203, 24);
             this.cmbTaxAmount.TabIndex = 87;
@@ -700,9 +772,9 @@
             this.label6.Location = new System.Drawing.Point(123, 7);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 17);
+            this.label6.Size = new System.Drawing.Size(68, 17);
             this.label6.TabIndex = 90;
-            this.label6.Text = "Tax";
+            this.label6.Text = "State Tax";
             // 
             // datePkrBilldate
             // 
@@ -710,7 +782,7 @@
             this.datePkrBilldate.CustomFormat = "dd/MM/yyyy";
             this.datePkrBilldate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.datePkrBilldate.Location = new System.Drawing.Point(17, 52);
-            this.datePkrBilldate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.datePkrBilldate.Margin = new System.Windows.Forms.Padding(4);
             this.datePkrBilldate.Name = "datePkrBilldate";
             this.datePkrBilldate.Size = new System.Drawing.Size(197, 22);
             this.datePkrBilldate.TabIndex = 85;
@@ -720,9 +792,9 @@
             this.cmbBillType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cmbBillType.FormattingEnabled = true;
             this.cmbBillType.Location = new System.Drawing.Point(224, 52);
-            this.cmbBillType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbBillType.Margin = new System.Windows.Forms.Padding(4);
             this.cmbBillType.Name = "cmbBillType";
-            this.cmbBillType.Size = new System.Drawing.Size(221, 24);
+            this.cmbBillType.Size = new System.Drawing.Size(154, 24);
             this.cmbBillType.TabIndex = 84;
             this.cmbBillType.SelectedIndexChanged += new System.EventHandler(this.cmbBillType_SelectedIndexChanged);
             // 
@@ -754,21 +826,29 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(636, 11);
+            this.label1.Location = new System.Drawing.Point(739, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
+            // cmbCentralTaxAmount
+            // 
+            this.cmbCentralTaxAmount.FormattingEnabled = true;
+            this.cmbCentralTaxAmount.Location = new System.Drawing.Point(3, 37);
+            this.cmbCentralTaxAmount.Name = "cmbCentralTaxAmount";
+            this.cmbCentralTaxAmount.Size = new System.Drawing.Size(207, 24);
+            this.cmbCentralTaxAmount.TabIndex = 97;
+            // 
             // CreateBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1349, 863);
+            this.ClientSize = new System.Drawing.Size(1554, 863);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateBill";
             this.Text = "Create Bill";
             this.panel1.ResumeLayout(false);
@@ -787,6 +867,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdItem)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -859,5 +941,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTaxName;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtCentralTaxName;
+        private System.Windows.Forms.TextBox txtCentralTaxAmount;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbCentralTaxAmount;
     }
 }

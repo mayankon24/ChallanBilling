@@ -13,7 +13,9 @@ namespace Billing.Entity
         public int Bill_Type_Id { get; set; }
         public DateTime Bill_Date { get; set; }
         public string Tax_Name { get; set; }
+        public string Central_Tax_Name { get; set; }
         public decimal? Tax_Percentage { get; set; }
+        public decimal? Central_Tax_Percentage { get; set; }
         public int Is_Tax_Inclusive { get; set; }
         public decimal? Cartage { get; set; }
         public decimal? Discount { get; set; }

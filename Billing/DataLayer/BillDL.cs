@@ -77,7 +77,9 @@ namespace Billing.DataLayer
                                                      , objSQLHelper.SqlParam("@Company_id", objBillEL.Company_id, SqlDbType.Int)
                                                      , objSQLHelper.SqlParam("@Is_Tax_Inclusive", objBillEL.Is_Tax_Inclusive, SqlDbType.Int)
                                                      , objSQLHelper.SqlParam("@Tax_Name", objBillEL.Tax_Name, SqlDbType.NVarChar)
+                                                     , objSQLHelper.SqlParam("@Central_Tax_Name", objBillEL.Central_Tax_Name, SqlDbType.NVarChar)
                                                      , objSQLHelper.SqlParam("@Tax_Percentage", objBillEL.Tax_Percentage, SqlDbType.Decimal)
+                                                     , objSQLHelper.SqlParam("@Central_Tax_Percentage", objBillEL.Central_Tax_Percentage, SqlDbType.Decimal)
                                                      , objSQLHelper.SqlParam("@Cartage", objBillEL.Cartage, SqlDbType.Decimal)
                                                      , objSQLHelper.SqlParam("@Discount", objBillEL.Discount, SqlDbType.Decimal)
                                                    );
@@ -93,7 +95,9 @@ namespace Billing.DataLayer
                                                      , objSQLHelper.SqlParam("@Bill_Type_Id", objBillEL.Bill_Type_Id, SqlDbType.Int)                                                   
                                                      , objSQLHelper.SqlParam("@Is_Tax_Inclusive", objBillEL.Is_Tax_Inclusive, SqlDbType.Int)
                                                      , objSQLHelper.SqlParam("@Tax_Name", objBillEL.Tax_Name, SqlDbType.NVarChar)
+                                                     , objSQLHelper.SqlParam("@Central_Tax_Name", objBillEL.Central_Tax_Name, SqlDbType.NVarChar)
                                                      , objSQLHelper.SqlParam("@Tax_Percentage", objBillEL.Tax_Percentage, SqlDbType.Decimal)
+                                                     , objSQLHelper.SqlParam("@Central_Tax_Percentage", objBillEL.Central_Tax_Percentage, SqlDbType.Decimal)
                                                      , objSQLHelper.SqlParam("@Cartage", objBillEL.Cartage, SqlDbType.Decimal)
                                                      , objSQLHelper.SqlParam("@Discount", objBillEL.Discount, SqlDbType.Decimal)
                                                      , objSQLHelper.SqlParam("@Bill_Id", objBillEL.Bill_Id, SqlDbType.Int)
@@ -127,7 +131,9 @@ namespace Billing.DataLayer
                     objBillEL.Company_id = (int)dt.Rows[i]["Company_id"];
                     objBillEL.Is_Tax_Inclusive = Convert.ToInt32(dt.Rows[i]["Is_Tax_Inclusive"]);
                     objBillEL.Tax_Percentage = Convert.ToDecimal(dt.Rows[i]["Tax_Percentage"]);
+                    objBillEL.Central_Tax_Percentage = Convert.ToDecimal(dt.Rows[i]["Central_Tax_Percentage"]);
                     objBillEL.Tax_Name = dt.Rows[i]["Tax_Name"].ToString();
+                    objBillEL.Central_Tax_Name = dt.Rows[i]["Central_Tax_Name"].ToString();
                     objBillEL.Cartage = dt.Rows[i]["Cartage"].GetType() == typeof(DBNull) ? (decimal?)null : Convert.ToDecimal(dt.Rows[i]["Cartage"]);
                     objBillEL.Discount = dt.Rows[i]["Discount"].GetType() == typeof(DBNull) ? (decimal?)null : Convert.ToDecimal(dt.Rows[i]["Discount"]);
                     lstBillEL.Add(objBillEL);
@@ -153,7 +159,9 @@ namespace Billing.DataLayer
                 objBillEL.Company_id = (int)dt.Rows[0]["Company_id"];
                 objBillEL.Is_Tax_Inclusive = Convert.ToInt32(dt.Rows[0]["Is_Tax_Inclusive"]);
                 objBillEL.Tax_Percentage = Convert.ToDecimal(dt.Rows[0]["Tax_Percentage"]);
+                objBillEL.Central_Tax_Percentage = Convert.ToDecimal(dt.Rows[0]["Central_Tax_Percentage"]);
                 objBillEL.Tax_Name = dt.Rows[0]["Tax_Name"].ToString();
+                objBillEL.Central_Tax_Name = dt.Rows[0]["Central_Tax_Name"].ToString();
                 objBillEL.Cartage = dt.Rows[0]["Cartage"].GetType() == typeof(DBNull) ? (decimal?)null : Convert.ToDecimal(dt.Rows[0]["Cartage"]);
                 objBillEL.Discount = dt.Rows[0]["Discount"].GetType() == typeof(DBNull) ? (decimal?)null : Convert.ToDecimal(dt.Rows[0]["Discount"]);
             }
@@ -180,7 +188,9 @@ namespace Billing.DataLayer
                     objBillEL.Company_id = (int)dt.Rows[i]["Company_id"];
                     objBillEL.Is_Tax_Inclusive = Convert.ToInt32(dt.Rows[i]["Is_Tax_Inclusive"]);
                     objBillEL.Tax_Percentage = Convert.ToDecimal(dt.Rows[i]["Tax_Percentage"]);
+                    objBillEL.Central_Tax_Percentage = Convert.ToDecimal(dt.Rows[i]["Central_Tax_Percentage"]);
                     objBillEL.Tax_Name = dt.Rows[i]["Tax_Name"].ToString();
+                    objBillEL.Central_Tax_Name = dt.Rows[i]["Central_Tax_Name"].ToString();
                     objBillEL.Cartage = dt.Rows[i]["Cartage"].GetType() == typeof(DBNull) ? (decimal?)null : Convert.ToDecimal(dt.Rows[i]["Cartage"]);
                     objBillEL.Discount = dt.Rows[i]["Discount"].GetType() == typeof(DBNull) ? (decimal?)null : Convert.ToDecimal(dt.Rows[i]["Discount"]);
                    

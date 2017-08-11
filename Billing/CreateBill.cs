@@ -33,6 +33,18 @@ namespace Billing
             }
         }
 
+        public TaxAmountEL CentralSelectedTax
+        {
+            get
+            {
+                //return (TaxAmountEL)cmbTaxAmount.SelectedItem;
+                int TaxAmountId = Convert.ToInt32(cmbCentralTaxAmount.SelectedValue.ToString());
+                TaxAmountDL _TaxAmountDL = new TaxAmountDL();
+                TaxAmountEL objTaxAmountEL = _TaxAmountDL.GetTaxAmountById(TaxAmountId);
+                return objTaxAmountEL;
+            }
+        }
+
         #endregion
 
         #region Variavle
@@ -76,8 +88,11 @@ namespace Billing
                 btnNewBill.Visible = false;
                 btnUpdate.Visible = true;
                 cmbTaxAmount.Visible = false;
+                cmbCentralTaxAmount.Visible = false;
                 txtTaxAmount.Visible = true;
+                txtCentralTaxAmount.Visible = true;
                 txtTaxName.Visible = true;
+                txtCentralTaxName.Visible = true;
                 cmbBillType.Enabled = false;
                 lblBillNo.Visible = true;
                 textInvoiceNo.Visible = false;
@@ -88,8 +103,11 @@ namespace Billing
                 btnNewBill.Visible = false;
                 btnUpdate.Visible = false;
                 cmbTaxAmount.Visible = true;
+                cmbCentralTaxAmount.Visible = true;
                 txtTaxAmount.Visible = false;
+                txtCentralTaxAmount.Visible = false;
                 txtTaxName.Visible = false;
+                txtCentralTaxName.Visible = false;
                 lblBillNo.Visible = false;
                 textInvoiceNo.Visible = true;
             }
@@ -544,9 +562,17 @@ namespace Billing
                 //}
             }
 
+
+            DataTable dt1 = dt.Copy();
+
             cmbTaxAmount.DataSource = dt;
             cmbTaxAmount.DisplayMember = "TaxAmount";
             cmbTaxAmount.ValueMember = "Id";
+
+
+            cmbCentralTaxAmount.DataSource = dt1;
+            cmbCentralTaxAmount.DisplayMember = "TaxAmount";
+            cmbCentralTaxAmount.ValueMember = "Id";
         }
         private List<DeliveryDetailEL> GetDeliveryDetailList(int SelectedPurchase_Order_Detail_Id)
         {
@@ -676,7 +702,9 @@ namespace Billing
             datePkrBilldate.Value = ObjBillEL.Bill_Date;
             cmbBillType.SelectedValue = ObjBillEL.Bill_Type_Id;
             txtTaxAmount.Text = ObjBillEL.Tax_Percentage.ToString();
+            txtCentralTaxAmount.Text = ObjBillEL.Central_Tax_Percentage.ToString();
             txtTaxName.Text = ObjBillEL.Tax_Name;
+            txtCentralTaxName.Text = ObjBillEL.Central_Tax_Name;
             chkTaxInclusive.Checked = ObjBillEL.Is_Tax_Inclusive == (int)enumTaxinclusive.Yes ? true : false;
             txtCartage.Text = ObjBillEL.Cartage.ToString();
             txtDiscount.Text = ObjBillEL.Discount.ToString();
@@ -762,8 +790,10 @@ namespace Billing
                 decimal Discount;
                 objBillEL.Discount = decimal.TryParse(txtDiscount.Text, out Discount) == true ? Discount : 0;// (decimal?)null;
                 objBillEL.Tax_Percentage = SelectedTax.Tax_Amout;
+                objBillEL.Central_Tax_Percentage = CentralSelectedTax.Tax_Amout;
                 objBillEL.Tax_Name = SelectedTax.Tax_Name;
-                
+                objBillEL.Central_Tax_Name = CentralSelectedTax.Tax_Name;
+
                 //decimal taxPercentage;
                 //if (decimal.TryParse(cmbTaxAmount.Text, out taxPercentage))
                 //{
@@ -907,9 +937,11 @@ namespace Billing
                 objBillEL.Company_id = objCompanyEL.Company_id;
                 objBillEL.Is_Tax_Inclusive = chkTaxInclusive.Checked == true ? (int)enumTaxinclusive.Yes : (int)enumTaxinclusive.No;
                 objBillEL.Tax_Name = txtTaxName.Text.Trim();
+                objBillEL.Central_Tax_Name = txtCentralTaxName.Text.Trim();
                 try
                 {
                     objBillEL.Tax_Percentage = Convert.ToDecimal(txtTaxAmount.Text);
+                    objBillEL.Central_Tax_Percentage = Convert.ToDecimal(txtCentralTaxAmount.Text);
                 }
                 catch (Exception)
                 {
