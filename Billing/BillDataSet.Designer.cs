@@ -732,15 +732,15 @@ namespace Billing {
             
             private global::System.Data.DataColumn columnTax_Percentage;
             
+            private global::System.Data.DataColumn columnCentral_Tax_Name;
+            
+            private global::System.Data.DataColumn columnCentral_Tax_Percentage;
+            
             private global::System.Data.DataColumn columnIs_Tax_Apllicable;
             
             private global::System.Data.DataColumn columnCartage;
             
             private global::System.Data.DataColumn columnDiscount;
-            
-            private global::System.Data.DataColumn columnCentral_Tax_Name;
-            
-            private global::System.Data.DataColumn columnCentral_Tax_Percentage;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -865,6 +865,22 @@ namespace Billing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Central_Tax_NameColumn {
+                get {
+                    return this.columnCentral_Tax_Name;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Central_Tax_PercentageColumn {
+                get {
+                    return this.columnCentral_Tax_Percentage;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn Is_Tax_ApllicableColumn {
                 get {
                     return this.columnIs_Tax_Apllicable;
@@ -884,22 +900,6 @@ namespace Billing {
             public global::System.Data.DataColumn DiscountColumn {
                 get {
                     return this.columnDiscount;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Central_Tax_NameColumn {
-                get {
-                    return this.columnCentral_Tax_Name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Central_Tax_PercentageColumn {
-                get {
-                    return this.columnCentral_Tax_Percentage;
                 }
             }
             
@@ -952,11 +952,11 @@ namespace Billing {
                         System.DateTime Bill_Date, 
                         string Tax_Name, 
                         decimal Tax_Percentage, 
+                        string Central_Tax_Name, 
+                        decimal Central_Tax_Percentage, 
                         int Is_Tax_Apllicable, 
                         decimal Cartage, 
-                        decimal Discount, 
-                        string Central_Tax_Name, 
-                        decimal Central_Tax_Percentage) {
+                        decimal Discount) {
                 GetBillReportHeaderRow rowGetBillReportHeaderRow = ((GetBillReportHeaderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         company_name,
@@ -970,11 +970,11 @@ namespace Billing {
                         Bill_Date,
                         Tax_Name,
                         Tax_Percentage,
+                        Central_Tax_Name,
+                        Central_Tax_Percentage,
                         Is_Tax_Apllicable,
                         Cartage,
-                        Discount,
-                        Central_Tax_Name,
-                        Central_Tax_Percentage};
+                        Discount};
                 rowGetBillReportHeaderRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGetBillReportHeaderRow);
                 return rowGetBillReportHeaderRow;
@@ -1008,11 +1008,11 @@ namespace Billing {
                 this.columnBill_Date = base.Columns["Bill_Date"];
                 this.columnTax_Name = base.Columns["Tax_Name"];
                 this.columnTax_Percentage = base.Columns["Tax_Percentage"];
+                this.columnCentral_Tax_Name = base.Columns["Central_Tax_Name"];
+                this.columnCentral_Tax_Percentage = base.Columns["Central_Tax_Percentage"];
                 this.columnIs_Tax_Apllicable = base.Columns["Is_Tax_Apllicable"];
                 this.columnCartage = base.Columns["Cartage"];
                 this.columnDiscount = base.Columns["Discount"];
-                this.columnCentral_Tax_Name = base.Columns["Central_Tax_Name"];
-                this.columnCentral_Tax_Percentage = base.Columns["Central_Tax_Percentage"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1040,16 +1040,16 @@ namespace Billing {
                 base.Columns.Add(this.columnTax_Name);
                 this.columnTax_Percentage = new global::System.Data.DataColumn("Tax_Percentage", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTax_Percentage);
+                this.columnCentral_Tax_Name = new global::System.Data.DataColumn("Central_Tax_Name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCentral_Tax_Name);
+                this.columnCentral_Tax_Percentage = new global::System.Data.DataColumn("Central_Tax_Percentage", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCentral_Tax_Percentage);
                 this.columnIs_Tax_Apllicable = new global::System.Data.DataColumn("Is_Tax_Apllicable", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIs_Tax_Apllicable);
                 this.columnCartage = new global::System.Data.DataColumn("Cartage", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCartage);
                 this.columnDiscount = new global::System.Data.DataColumn("Discount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDiscount);
-                this.columnCentral_Tax_Name = new global::System.Data.DataColumn("Central_Tax_Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCentral_Tax_Name);
-                this.columnCentral_Tax_Percentage = new global::System.Data.DataColumn("Central_Tax_Percentage", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCentral_Tax_Percentage);
                 this.columncompany_name.MaxLength = 150;
                 this.columnaddress1.ReadOnly = true;
                 this.columnaddress1.MaxLength = 603;
@@ -1656,6 +1656,40 @@ namespace Billing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Central_Tax_Name {
+                get {
+                    try {
+                        return ((string)(this[this.tableGetBillReportHeader.Central_Tax_NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Central_Tax_Name\' in table \'GetBillReportHeader\' is DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableGetBillReportHeader.Central_Tax_NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Central_Tax_Percentage {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableGetBillReportHeader.Central_Tax_PercentageColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Central_Tax_Percentage\' in table \'GetBillReportHeader\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetBillReportHeader.Central_Tax_PercentageColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int Is_Tax_Apllicable {
                 get {
                     try {
@@ -1700,40 +1734,6 @@ namespace Billing {
                 }
                 set {
                     this[this.tableGetBillReportHeader.DiscountColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Central_Tax_Name {
-                get {
-                    try {
-                        return ((string)(this[this.tableGetBillReportHeader.Central_Tax_NameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Central_Tax_Name\' in table \'GetBillReportHeader\' is DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tableGetBillReportHeader.Central_Tax_NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Central_Tax_Percentage {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableGetBillReportHeader.Central_Tax_PercentageColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Central_Tax_Percentage\' in table \'GetBillReportHeader\' is D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableGetBillReportHeader.Central_Tax_PercentageColumn] = value;
                 }
             }
             
@@ -1871,6 +1871,30 @@ namespace Billing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCentral_Tax_NameNull() {
+                return this.IsNull(this.tableGetBillReportHeader.Central_Tax_NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCentral_Tax_NameNull() {
+                this[this.tableGetBillReportHeader.Central_Tax_NameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCentral_Tax_PercentageNull() {
+                return this.IsNull(this.tableGetBillReportHeader.Central_Tax_PercentageColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCentral_Tax_PercentageNull() {
+                this[this.tableGetBillReportHeader.Central_Tax_PercentageColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsIs_Tax_ApllicableNull() {
                 return this.IsNull(this.tableGetBillReportHeader.Is_Tax_ApllicableColumn);
             }
@@ -1903,30 +1927,6 @@ namespace Billing {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDiscountNull() {
                 this[this.tableGetBillReportHeader.DiscountColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCentral_Tax_NameNull() {
-                return this.IsNull(this.tableGetBillReportHeader.Central_Tax_NameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCentral_Tax_NameNull() {
-                this[this.tableGetBillReportHeader.Central_Tax_NameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCentral_Tax_PercentageNull() {
-                return this.IsNull(this.tableGetBillReportHeader.Central_Tax_PercentageColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCentral_Tax_PercentageNull() {
-                this[this.tableGetBillReportHeader.Central_Tax_PercentageColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2337,11 +2337,11 @@ namespace Billing.BillDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Bill_Date", "Bill_Date");
             tableMapping.ColumnMappings.Add("Tax_Name", "Tax_Name");
             tableMapping.ColumnMappings.Add("Tax_Percentage", "Tax_Percentage");
+            tableMapping.ColumnMappings.Add("Central_Tax_Name", "Central_Tax_Name");
+            tableMapping.ColumnMappings.Add("Central_Tax_Percentage", "Central_Tax_Percentage");
             tableMapping.ColumnMappings.Add("Is_Tax_Apllicable", "Is_Tax_Apllicable");
             tableMapping.ColumnMappings.Add("Cartage", "Cartage");
             tableMapping.ColumnMappings.Add("Discount", "Discount");
-            tableMapping.ColumnMappings.Add("Central_Tax_Name", "Central_Tax_Name");
-            tableMapping.ColumnMappings.Add("Central_Tax_Percentage", "Central_Tax_Percentage");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

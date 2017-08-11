@@ -38,7 +38,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetBillReportHeaderTableAdapter" GeneratorDataComponentClassName="GetBillReportHeaderTableAdapter" Name="GetBillReportHeader" UserDataComponentName="GetBillReportHeaderTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DataConnectionString1 (Settings)" DbObjectName="BillingChallan.dbo.GetBillReportHeader" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DataConnectionString1 (Settings)" DbObjectName="BillingChallan.dbo.GetBillReportHeader" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.GetBillReportHeader</CommandText>
@@ -63,11 +63,11 @@
               <Mapping SourceColumn="Bill_Date" DataSetColumn="Bill_Date" />
               <Mapping SourceColumn="Tax_Name" DataSetColumn="Tax_Name" />
               <Mapping SourceColumn="Tax_Percentage" DataSetColumn="Tax_Percentage" />
+              <Mapping SourceColumn="Central_Tax_Name" DataSetColumn="Central_Tax_Name" />
+              <Mapping SourceColumn="Central_Tax_Percentage" DataSetColumn="Central_Tax_Percentage" />
               <Mapping SourceColumn="Is_Tax_Apllicable" DataSetColumn="Is_Tax_Apllicable" />
               <Mapping SourceColumn="Cartage" DataSetColumn="Cartage" />
               <Mapping SourceColumn="Discount" DataSetColumn="Discount" />
-              <Mapping SourceColumn="Central_Tax_Name" DataSetColumn="Central_Tax_Name" />
-              <Mapping SourceColumn="Central_Tax_Percentage" DataSetColumn="Central_Tax_Percentage" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -79,7 +79,7 @@
   <xs:element name="BillDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BillDataSet" msprop:Generator_UserDSName="BillDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="GetBillReportBody" msprop:Generator_TableClassName="GetBillReportBodyDataTable" msprop:Generator_TableVarName="tableGetBillReportBody" msprop:Generator_RowChangedName="GetBillReportBodyRowChanged" msprop:Generator_TablePropName="GetBillReportBody" msprop:Generator_RowDeletingName="GetBillReportBodyRowDeleting" msprop:Generator_RowChangingName="GetBillReportBodyRowChanging" msprop:Generator_RowEvHandlerName="GetBillReportBodyRowChangeEventHandler" msprop:Generator_RowDeletedName="GetBillReportBodyRowDeleted" msprop:Generator_RowClassName="GetBillReportBodyRow" msprop:Generator_UserTableName="GetBillReportBody" msprop:Generator_RowEvArgName="GetBillReportBodyRowChangeEvent">
+        <xs:element name="GetBillReportBody" msprop:Generator_TableClassName="GetBillReportBodyDataTable" msprop:Generator_TableVarName="tableGetBillReportBody" msprop:Generator_TablePropName="GetBillReportBody" msprop:Generator_RowDeletingName="GetBillReportBodyRowDeleting" msprop:Generator_RowChangingName="GetBillReportBodyRowChanging" msprop:Generator_RowEvHandlerName="GetBillReportBodyRowChangeEventHandler" msprop:Generator_RowDeletedName="GetBillReportBodyRowDeleted" msprop:Generator_UserTableName="GetBillReportBody" msprop:Generator_RowChangedName="GetBillReportBodyRowChanged" msprop:Generator_RowEvArgName="GetBillReportBodyRowChangeEvent" msprop:Generator_RowClassName="GetBillReportBodyRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Bill_Item_Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnBill_Item_Id" msprop:Generator_ColumnPropNameInRow="Bill_Item_Id" msprop:Generator_ColumnPropNameInTable="Bill_Item_IdColumn" msprop:Generator_UserColumnName="Bill_Item_Id" type="xs:int" />
@@ -113,7 +113,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GetBillReportHeader" msprop:Generator_TableClassName="GetBillReportHeaderDataTable" msprop:Generator_TableVarName="tableGetBillReportHeader" msprop:Generator_RowChangedName="GetBillReportHeaderRowChanged" msprop:Generator_TablePropName="GetBillReportHeader" msprop:Generator_RowDeletingName="GetBillReportHeaderRowDeleting" msprop:Generator_RowChangingName="GetBillReportHeaderRowChanging" msprop:Generator_RowEvHandlerName="GetBillReportHeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="GetBillReportHeaderRowDeleted" msprop:Generator_RowClassName="GetBillReportHeaderRow" msprop:Generator_UserTableName="GetBillReportHeader" msprop:Generator_RowEvArgName="GetBillReportHeaderRowChangeEvent">
+        <xs:element name="GetBillReportHeader" msprop:Generator_TableClassName="GetBillReportHeaderDataTable" msprop:Generator_TableVarName="tableGetBillReportHeader" msprop:Generator_TablePropName="GetBillReportHeader" msprop:Generator_RowDeletingName="GetBillReportHeaderRowDeleting" msprop:Generator_RowChangingName="GetBillReportHeaderRowChanging" msprop:Generator_RowEvHandlerName="GetBillReportHeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="GetBillReportHeaderRowDeleted" msprop:Generator_UserTableName="GetBillReportHeader" msprop:Generator_RowChangedName="GetBillReportHeaderRowChanged" msprop:Generator_RowEvArgName="GetBillReportHeaderRowChangeEvent" msprop:Generator_RowClassName="GetBillReportHeaderRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="company_name" msprop:Generator_ColumnVarNameInTable="columncompany_name" msprop:Generator_ColumnPropNameInRow="company_name" msprop:Generator_ColumnPropNameInTable="company_nameColumn" msprop:Generator_UserColumnName="company_name" minOccurs="0">
@@ -169,9 +169,6 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Tax_Percentage" msprop:Generator_ColumnVarNameInTable="columnTax_Percentage" msprop:Generator_ColumnPropNameInRow="Tax_Percentage" msprop:Generator_ColumnPropNameInTable="Tax_PercentageColumn" msprop:Generator_UserColumnName="Tax_Percentage" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Is_Tax_Apllicable" msprop:Generator_ColumnVarNameInTable="columnIs_Tax_Apllicable" msprop:Generator_ColumnPropNameInRow="Is_Tax_Apllicable" msprop:Generator_ColumnPropNameInTable="Is_Tax_ApllicableColumn" msprop:Generator_UserColumnName="Is_Tax_Apllicable" type="xs:int" minOccurs="0" />
-              <xs:element name="Cartage" msprop:Generator_ColumnVarNameInTable="columnCartage" msprop:Generator_ColumnPropNameInRow="Cartage" msprop:Generator_ColumnPropNameInTable="CartageColumn" msprop:Generator_UserColumnName="Cartage" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Discount" msprop:Generator_ColumnVarNameInTable="columnDiscount" msprop:Generator_ColumnPropNameInRow="Discount" msprop:Generator_ColumnPropNameInTable="DiscountColumn" msprop:Generator_UserColumnName="Discount" type="xs:decimal" minOccurs="0" />
               <xs:element name="Central_Tax_Name" msprop:Generator_ColumnVarNameInTable="columnCentral_Tax_Name" msprop:Generator_ColumnPropNameInRow="Central_Tax_Name" msprop:Generator_ColumnPropNameInTable="Central_Tax_NameColumn" msprop:Generator_UserColumnName="Central_Tax_Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -180,6 +177,9 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Central_Tax_Percentage" msprop:Generator_ColumnVarNameInTable="columnCentral_Tax_Percentage" msprop:Generator_ColumnPropNameInRow="Central_Tax_Percentage" msprop:Generator_ColumnPropNameInTable="Central_Tax_PercentageColumn" msprop:Generator_UserColumnName="Central_Tax_Percentage" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Is_Tax_Apllicable" msprop:Generator_ColumnVarNameInTable="columnIs_Tax_Apllicable" msprop:Generator_ColumnPropNameInRow="Is_Tax_Apllicable" msprop:Generator_ColumnPropNameInTable="Is_Tax_ApllicableColumn" msprop:Generator_UserColumnName="Is_Tax_Apllicable" type="xs:int" minOccurs="0" />
+              <xs:element name="Cartage" msprop:Generator_ColumnVarNameInTable="columnCartage" msprop:Generator_ColumnPropNameInRow="Cartage" msprop:Generator_ColumnPropNameInTable="CartageColumn" msprop:Generator_UserColumnName="Cartage" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Discount" msprop:Generator_ColumnVarNameInTable="columnDiscount" msprop:Generator_ColumnPropNameInRow="Discount" msprop:Generator_ColumnPropNameInTable="DiscountColumn" msprop:Generator_UserColumnName="Discount" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
