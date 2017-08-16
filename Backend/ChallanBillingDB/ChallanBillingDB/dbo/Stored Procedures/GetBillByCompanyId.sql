@@ -1,4 +1,6 @@
-﻿CREATE PROCEDURE [dbo].[GetBillByCompanyId]
+﻿
+
+ CREATE PROCEDURE [dbo].[GetBillByCompanyId]
 (
 	@Company_id int
 )
@@ -11,15 +13,11 @@ SELECT [Bill_Id]
       ,[Bill_Type_Id]
       ,[Bill_Date]
       ,[Tax_Name]
+	  ,[Central_Tax_Name]
       ,[Tax_Percentage]
+	  ,[Central_Tax_Percentage]
       ,[Is_Tax_Inclusive]
       ,isnull(Cartage, 0) AS Cartage 
       ,isnull(Discount, 0) as Discount
   FROM [B_BILL]
  WHERE Company_id = @Company_id
-
-
-
-
-/****** Object:  StoredProcedure [dbo].[GetBillReportHeader]    Script Date: 12/22/2011 01:45:15 ******/
-SET ANSI_NULLS ON

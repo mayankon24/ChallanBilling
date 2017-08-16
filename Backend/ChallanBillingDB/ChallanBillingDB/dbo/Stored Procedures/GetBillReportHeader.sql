@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[GetBillReportHeader]
+﻿
+ CREATE PROCEDURE [dbo].[GetBillReportHeader]
 (
 	@Bill_Id int,
 	@Company_id int 
@@ -15,7 +16,9 @@ AS
 		  ,B_BILL.Bill_Type_Id
 		  ,B_BILL.Bill_Date
 		  ,B_BILL.Tax_Name
-		  ,B_BILL.Tax_Percentage
+		   ,B_BILL.Tax_Percentage
+		  ,B_BILL.Central_Tax_Name
+		  ,B_BILL.Central_Tax_Percentage
 		  ,B_BILL.Is_Tax_Inclusive as Is_Tax_Apllicable
 		  ,B_BILL.Cartage
 		  ,B_BILL.Discount

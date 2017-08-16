@@ -5,7 +5,9 @@
    ,@Bill_Type_Id INT
    ,@Bill_Date datetime 
    ,@Tax_Percentage decimal(10,4)
+   ,@Central_Tax_Percentage decimal(10,4)
    ,@Tax_Name nvarchar(50)
+   ,@Central_Tax_Name nvarchar(50)
    ,@Is_Tax_Inclusive INT
    ,@Cartage decimal(10,4)
    ,@Discount decimal(10,4)
@@ -89,7 +91,9 @@ AS
            ,[Bill_Type_Id]
            ,[Bill_Date]
            ,[Tax_Name]
-           ,[Tax_Percentage]           
+		   ,[Central_Tax_Name]
+           ,[Tax_Percentage]  
+		   ,Central_Tax_Percentage
            ,[Is_Tax_Inclusive]
 		   ,BillNo_Code
 		   ,Cartage
@@ -100,7 +104,9 @@ AS
            ,@Bill_Type_Id
            ,@Bill_Date
            ,@Tax_Name
+		   ,@Central_Tax_Name
            ,@Tax_Percentage
+		   ,@Central_Tax_Percentage
            ,@Is_Tax_Inclusive
 		   ,@BillNo_Code
 		   ,@Cartage
