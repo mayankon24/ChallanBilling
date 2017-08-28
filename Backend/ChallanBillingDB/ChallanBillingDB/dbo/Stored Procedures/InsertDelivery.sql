@@ -1,6 +1,4 @@
-﻿
-
-CREATE PROCEDURE [dbo].[InsertDelivery]
+﻿CREATE PROCEDURE [dbo].[InsertDelivery]
 (
 	@company_id int,
 	@Company_Type_Id int,
@@ -12,24 +10,39 @@ AS
 	SET NOCOUNT OFF;
 	
 	DECLARE @Delivery_No_Code Nvarchar(50) 
-	DECLARE @Book_no int, @Book_count int
+	Declare @StartFinancial_Year datetime
+	Declare @EndFinancial_Year datetime
 	
-	Select @Delivery_No_Code = ISNULL(MAX(Delivery_No_Code),1000)
-	      ,@Book_no = ISNULL( max(Book_no), 0)
+
+	set @StartFinancial_Year = case 
+						  when month(@delivery_date) >= 4	then DATEADD(YEAR, year(@delivery_date)-1900, DATEADD(MONTH, 3, 0))
+						  when month(@delivery_date) < 4	then DATEADD(YEAR, year(@delivery_date)-1900 -1, DATEADD(MONTH, 3, 0))
+					    end 
+
+	set @EndFinancial_Year = case 
+						when month(@delivery_date) >= 4	then DATEADD(YEAR, year(@delivery_date)-1900 +1, DATEADD(MONTH, 3, -1)) 
+						when month(@delivery_date) < 4	then DATEADD(YEAR, year(@delivery_date)-1900, DATEADD(MONTH, 3, -1))
+					 end
+
+
+
+
+	Select @Delivery_No_Code = ISNULL(MAX(Delivery_No_Code),1000)	    
 	  FROM M_DELIVERY INNER JOIN
 	       M_COMPANY ON M_DELIVERY.Company_id = M_COMPANY.Company_id
 	 WHERE M_COMPANY.Company_Type_Id = @Company_Type_Id
+	AND delivery_date >= @StartFinancial_Year 
+	AND delivery_date <= @EndFinancial_Year
+
+
+	if (@Delivery_No_Code is null or @Delivery_No_Code = '' or @Delivery_No_Code < 0)	
+	begin
+		set @Delivery_No_Code =0
+	end
+
+	SET @Delivery_No_Code = @Delivery_No_Code + 1
+
 	
-	Select  @Book_count = count(1)
-	  FROM M_DELIVERY (nolock) INNER JOIN
-	       M_COMPANY ON M_DELIVERY.Company_id = M_COMPANY.Company_id
-	 WHERE M_COMPANY.Company_Type_Id = @Company_Type_Id
-	 and M_DELIVERY.book_no = @Book_no 
-
-
-	if(@Book_count >= 50) set @Book_no = @Book_no +1
-
-	Set @Delivery_No_Code = @Delivery_No_Code + 1	
 	
 	if (@delivery_no is not null AND @delivery_no <> ''  AND @delivery_no <> 0)
 	begin
@@ -50,7 +63,7 @@ AS
 					, @Delivery_No_Code
 					, @delivery_date
 					, @Delivery_No_Code
-					,@Book_no
+					, 0
 					);
 								
 Declare @Delivery_Id int

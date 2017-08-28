@@ -1,4 +1,5 @@
-﻿CREATE PROCEDURE [dbo].[InsertBill]
+﻿
+CREATE PROCEDURE [dbo].[InsertBill]
 (
     @Company_id INT
    ,@Bill_No nvarchar(50)
@@ -14,8 +15,7 @@
 )
 AS
 	SET NOCOUNT OFF;
-	
-	
+
 	Declare @StartFinancial_Year datetime
 	Declare @EndFinancial_Year datetime
 	Declare @Company_Type int
@@ -33,16 +33,10 @@ AS
 						when month(@Bill_Date) < 4	then DATEADD(YEAR, year(@Bill_Date)-1900, DATEADD(MONTH, 3, -1))
 					 end
 
-	
 	SELECT @BillNo_Code = ISNULL(max(BillNo_Code), 0)
-	FROM B_BILL	INNER JOIN 
-	M_COMPANY ON  B_BILL.Company_id = M_COMPANY.Company_id
-	Where		
-	(
-		((@Bill_Type_Id = 1 or @Bill_Type_Id = 3 ) AND (Bill_Type_Id = 1 or Bill_Type_Id = 3))
-		OR ((@Bill_Type_Id = 4 or @Bill_Type_Id = 2 ) AND (Bill_Type_Id = 4 or Bill_Type_Id = 2))
-	) And
-	 M_COMPANY.Company_Type_Id =@Company_Type
+	FROM B_BILL	
+	INNER JOIN 	M_COMPANY ON  B_BILL.Company_id = M_COMPANY.Company_id
+	Where M_COMPANY.Company_Type_Id = @Company_Type
 	AND Bill_Date >= @StartFinancial_Year 
 	AND Bill_Date <= @EndFinancial_Year
 	
@@ -60,6 +54,7 @@ AS
 	Declare @BillNo  NVARCHAR(50)
 	select @BillNo = CONVERT(nvarchar,  @BillNo_Code)
 	
+
     if(@Bill_No is not null AND @Bill_No  <> '' and @Bill_No  <> 0)		
 	begin
 		set @BillNo = @Bill_No
@@ -96,9 +91,3 @@ AS
 	Declare @Id int
 	set @Id = SCOPE_IDENTITY()
 	select @Id
-	
-	
-	
-	
-/****** Object:  StoredProcedure [dbo].[UpdateBill]    Script Date: 12/22/2011 01:43:00 ******/
-SET ANSI_NULLS ON
