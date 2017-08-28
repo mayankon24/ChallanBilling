@@ -16,9 +16,9 @@ AS
 		  ,B_BILL.Bill_Type_Id
 		  ,B_BILL.Bill_Date
 		  ,B_BILL.Tax_Name
-		   ,B_BILL.Tax_Percentage
+		  ,nullif(B_BILL.Tax_Percentage, 0) as Tax_Percentage
 		  ,B_BILL.Central_Tax_Name
-		  ,B_BILL.Central_Tax_Percentage
+		  ,nullif(B_BILL.Central_Tax_Percentage, 0) as Central_Tax_Percentage
 		  ,B_BILL.Is_Tax_Inclusive as Is_Tax_Apllicable
 		  ,B_BILL.Cartage
 		  ,B_BILL.Discount
