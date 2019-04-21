@@ -707,6 +707,8 @@ namespace Billing {
             
             private global::System.Data.DataColumn columnDeliver_Quantity;
             
+            private global::System.Data.DataColumn columnGst_Rate;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public GetReportBodyDataTable() {
@@ -782,6 +784,14 @@ namespace Billing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Gst_RateColumn {
+                get {
+                    return this.columnGst_Rate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -817,14 +827,15 @@ namespace Billing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public GetReportBodyRow AddGetReportBodyRow(string Item_Name, string HSN_Code, string Packaging_Description, double Item_Rate, double Deliver_Quantity) {
+            public GetReportBodyRow AddGetReportBodyRow(string Item_Name, string HSN_Code, string Packaging_Description, double Item_Rate, double Deliver_Quantity, double Gst_Rate) {
                 GetReportBodyRow rowGetReportBodyRow = ((GetReportBodyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Item_Name,
                         HSN_Code,
                         Packaging_Description,
                         Item_Rate,
-                        Deliver_Quantity};
+                        Deliver_Quantity,
+                        Gst_Rate};
                 rowGetReportBodyRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGetReportBodyRow);
                 return rowGetReportBodyRow;
@@ -852,6 +863,7 @@ namespace Billing {
                 this.columnPackaging_Description = base.Columns["Packaging_Description"];
                 this.columnItem_Rate = base.Columns["Item_Rate"];
                 this.columnDeliver_Quantity = base.Columns["Deliver_Quantity"];
+                this.columnGst_Rate = base.Columns["Gst_Rate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -867,6 +879,8 @@ namespace Billing {
                 base.Columns.Add(this.columnItem_Rate);
                 this.columnDeliver_Quantity = new global::System.Data.DataColumn("Deliver_Quantity", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDeliver_Quantity);
+                this.columnGst_Rate = new global::System.Data.DataColumn("Gst_Rate", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGst_Rate);
                 this.columnItem_Name.MaxLength = 2147483647;
                 this.columnHSN_Code.MaxLength = 50;
                 this.columnPackaging_Description.MaxLength = 500;
@@ -1371,6 +1385,22 @@ namespace Billing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double Gst_Rate {
+                get {
+                    try {
+                        return ((double)(this[this.tableGetReportBody.Gst_RateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Gst_Rate\' in table \'GetReportBody\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetReportBody.Gst_RateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsItem_NameNull() {
                 return this.IsNull(this.tableGetReportBody.Item_NameColumn);
             }
@@ -1427,6 +1457,18 @@ namespace Billing {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDeliver_QuantityNull() {
                 this[this.tableGetReportBody.Deliver_QuantityColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsGst_RateNull() {
+                return this.IsNull(this.tableGetReportBody.Gst_RateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetGst_RateNull() {
+                this[this.tableGetReportBody.Gst_RateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1831,6 +1873,7 @@ namespace Billing.DataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("Packaging_Description", "Packaging_Description");
             tableMapping.ColumnMappings.Add("Item_Rate", "Item_Rate");
             tableMapping.ColumnMappings.Add("Deliver_Quantity", "Deliver_Quantity");
+            tableMapping.ColumnMappings.Add("Gst_Rate", "Gst_Rate");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

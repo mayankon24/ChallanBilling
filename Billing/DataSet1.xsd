@@ -38,7 +38,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GetReportBodyTableAdapter" GeneratorDataComponentClassName="GetReportBodyTableAdapter" Name="GetReportBody" UserDataComponentName="GetReportBodyTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DataConnectionString1 (Settings)" DbObjectName="BillingChallan.dbo.GetReportBody" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="DataConnectionString1 (Settings)" DbObjectName="BillingChallan.dbo.GetReportBody" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.GetReportBody</CommandText>
@@ -57,6 +57,7 @@
               <Mapping SourceColumn="Packaging_Description" DataSetColumn="Packaging_Description" />
               <Mapping SourceColumn="Item_Rate" DataSetColumn="Item_Rate" />
               <Mapping SourceColumn="Deliver_Quantity" DataSetColumn="Deliver_Quantity" />
+              <Mapping SourceColumn="Gst_Rate" DataSetColumn="Gst_Rate" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -126,7 +127,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GetReportBody" msprop:Generator_TableClassName="GetReportBodyDataTable" msprop:Generator_TableVarName="tableGetReportBody" msprop:Generator_TablePropName="GetReportBody" msprop:Generator_RowDeletingName="GetReportBodyRowDeleting" msprop:Generator_RowChangingName="GetReportBodyRowChanging" msprop:Generator_RowEvHandlerName="GetReportBodyRowChangeEventHandler" msprop:Generator_RowDeletedName="GetReportBodyRowDeleted" msprop:Generator_UserTableName="GetReportBody" msprop:Generator_RowChangedName="GetReportBodyRowChanged" msprop:Generator_RowEvArgName="GetReportBodyRowChangeEvent" msprop:Generator_RowClassName="GetReportBodyRow">
+        <xs:element name="GetReportBody" msprop:Generator_TableClassName="GetReportBodyDataTable" msprop:Generator_TableVarName="tableGetReportBody" msprop:Generator_RowChangedName="GetReportBodyRowChanged" msprop:Generator_TablePropName="GetReportBody" msprop:Generator_RowDeletingName="GetReportBodyRowDeleting" msprop:Generator_RowChangingName="GetReportBodyRowChanging" msprop:Generator_RowEvHandlerName="GetReportBodyRowChangeEventHandler" msprop:Generator_RowDeletedName="GetReportBodyRowDeleted" msprop:Generator_RowClassName="GetReportBodyRow" msprop:Generator_UserTableName="GetReportBody" msprop:Generator_RowEvArgName="GetReportBodyRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Item_Name" msprop:Generator_ColumnVarNameInTable="columnItem_Name" msprop:Generator_ColumnPropNameInRow="Item_Name" msprop:Generator_ColumnPropNameInTable="Item_NameColumn" msprop:Generator_UserColumnName="Item_Name" minOccurs="0">
@@ -152,6 +153,7 @@
               </xs:element>
               <xs:element name="Item_Rate" msprop:Generator_ColumnVarNameInTable="columnItem_Rate" msprop:Generator_ColumnPropNameInRow="Item_Rate" msprop:Generator_ColumnPropNameInTable="Item_RateColumn" msprop:Generator_UserColumnName="Item_Rate" type="xs:double" minOccurs="0" />
               <xs:element name="Deliver_Quantity" msprop:Generator_ColumnVarNameInTable="columnDeliver_Quantity" msprop:Generator_ColumnPropNameInRow="Deliver_Quantity" msprop:Generator_ColumnPropNameInTable="Deliver_QuantityColumn" msprop:Generator_UserColumnName="Deliver_Quantity" type="xs:double" minOccurs="0" />
+              <xs:element name="Gst_Rate" msprop:Generator_ColumnVarNameInTable="columnGst_Rate" msprop:Generator_ColumnPropNameInRow="Gst_Rate" msprop:Generator_ColumnPropNameInTable="Gst_RateColumn" msprop:Generator_UserColumnName="Gst_Rate" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
