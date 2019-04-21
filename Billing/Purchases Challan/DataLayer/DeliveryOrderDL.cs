@@ -46,7 +46,8 @@ namespace PurchasesChallan.DataLayer
                     int PuchasesOrderDetailId = objSQLHelper.ExecuteInsertProcedure("InsertDeliveryDetail", objSqlTransaction
                                                      , objSQLHelper.SqlParam("@Delivery_Id", DeliveryOrderId, SqlDbType.Int)
                                                      , objSQLHelper.SqlParam("@Purchase_Order_Detail_Id", Convert.ToInt32(dt.Rows[i]["Purchase_Order_Detail_Id"]), SqlDbType.Int)
-                                                     , objSQLHelper.SqlParam("@Deliver_Quantity", Convert.ToDouble(dt.Rows[i]["Deliver_Quantity"]), SqlDbType.Float)                                                                           
+                                                     , objSQLHelper.SqlParam("@Deliver_Quantity", Convert.ToDouble(dt.Rows[i]["Deliver_Quantity"]), SqlDbType.Float)
+                                                     , objSQLHelper.SqlParam("@Gst_Rate", Convert.ToDouble(dt.Rows[i]["Gst_Rate"]), SqlDbType.Float)
                                                     );
                 }
             }
@@ -65,6 +66,8 @@ namespace PurchasesChallan.DataLayer
                 int IsItemDeliver = Convert.ToInt32(dt.Rows[i]["IS_Item_Deliver"]);
                 int PurchaseOrderDetailId = Convert.ToInt32(dt.Rows[i]["Purchase_Order_Detail_Id"]);
                 double DeliverQuantity = Convert.ToDouble(dt.Rows[i]["Deliver_Quantity"]);
+                double GstRate = Convert.ToDouble(dt.Rows[i]["Gst_Rate"]);
+               
 
                 if (IsItemDeliver == 1)
                 {
@@ -74,6 +77,7 @@ namespace PurchasesChallan.DataLayer
                                                          , objSQLHelper.SqlParam("@Delivery_Id", deliveryOrderId, SqlDbType.Int)
                                                          , objSQLHelper.SqlParam("@Purchase_Order_Detail_Id", PurchaseOrderDetailId, SqlDbType.Int)
                                                          , objSQLHelper.SqlParam("@Deliver_Quantity", DeliverQuantity, SqlDbType.Float)
+                                                         , objSQLHelper.SqlParam("@Gst_Rate", GstRate, SqlDbType.Float)
                                                         );
                     }
                     else if (DeliveryDetailId > 0)
@@ -83,6 +87,7 @@ namespace PurchasesChallan.DataLayer
                         objSQLHelper.ExecuteUpdateProcedure("UpdateDeliveryDetails", objSqlTransaction
                                                          , objSQLHelper.SqlParam("@Deliver_Quantity", DeliverQuantity, SqlDbType.Float)
                                                          , objSQLHelper.SqlParam("@Delivery_Detail_Id", DeliveryDetailId, SqlDbType.Int)
+                                                         , objSQLHelper.SqlParam("@Gst_Rate", GstRate, SqlDbType.Float)
                                                         );
                     }
                 }

@@ -77,6 +77,7 @@ namespace PurchasesChallan
                 DataTable dt = new DataTable();
                 dt.Columns.Add("Purchase_Order_Detail_Id", typeof(int));
                 dt.Columns.Add("Deliver_Quantity", typeof(double));
+                dt.Columns.Add("Gst_Rate", typeof(double));
 
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
@@ -84,9 +85,11 @@ namespace PurchasesChallan
                     {
                         double PurchaseOrderDetailId = Convert.ToInt32(dataGridView1.Rows[i].Cells["Purchase_Order_Detail_Id"].Value);
                         double DeliverQuantity = Convert.ToDouble(dataGridView1.Rows[i].Cells["Deliver_Quantity"].Value);
+                        double GstRate = Convert.ToDouble(dataGridView1.Rows[i].Cells["Gst_Rate"].Value);
+
                         if (DeliverQuantity > 0)
                         {
-                            dt.Rows.Add(PurchaseOrderDetailId, DeliverQuantity);
+                            dt.Rows.Add(PurchaseOrderDetailId, DeliverQuantity, GstRate);
                         }
                         else
                         {
@@ -139,6 +142,7 @@ namespace PurchasesChallan
                     dt.Columns.Add("Delivery_Detail_Id", typeof(int));
                     dt.Columns.Add("Purchase_Order_Detail_Id", typeof(int));
                     dt.Columns.Add("Deliver_Quantity", typeof(double));
+                    dt.Columns.Add("Gst_Rate", typeof(double));
                     dt.Columns.Add("IS_Item_Deliver", typeof(int));
 
                     for (int i = 0; i < dataGridView1.Rows.Count; i++)
@@ -147,12 +151,14 @@ namespace PurchasesChallan
                         int IsItemDeliver = Convert.ToInt32(dataGridView1.Rows[i].Cells["IS_Item_Deliver"].Value);
                         int PurchaseOrderDetailId = Convert.ToInt32(dataGridView1.Rows[i].Cells["Purchase_Order_Detail_Id"].Value);
                         double DeliverQuantity = Convert.ToDouble(dataGridView1.Rows[i].Cells["Deliver_Quantity"].Value);
+                        double GstRate = Convert.ToDouble(dataGridView1.Rows[i].Cells["Gst_Rate"].Value);
+
                         if (DeliverQuantity <= 0 && IsItemDeliver == 1)
                         {
                             Common.MessageAlert("Can not deliver 0 or -ve quantity");
                             throw new Exception();
                         }
-                        dt.Rows.Add(DeliveryDetailId, PurchaseOrderDetailId, DeliverQuantity, IsItemDeliver);
+                        dt.Rows.Add(DeliveryDetailId, PurchaseOrderDetailId, DeliverQuantity, GstRate, IsItemDeliver);
 
                     }
 
@@ -321,6 +327,7 @@ namespace PurchasesChallan
                         dataGridView1.Rows[i].Cells["Item_Rate"].Value = dt.Rows[i]["Item_Rate"];
                         dataGridView1.Rows[i].Cells["Total_Amount"].Value = dt.Rows[i]["Total_Amount"];
                         dataGridView1.Rows[i].Cells["Deliver_Quantity"].Value = dt.Rows[i]["Deliver_Quantity"];
+                        dataGridView1.Rows[i].Cells["Gst_Rate"].Value = dt.Rows[i]["Gst_Rate"];
 
 
                         if (Convert.ToInt32(dt.Rows[i]["IS_Item_Deliver"]) == 1)

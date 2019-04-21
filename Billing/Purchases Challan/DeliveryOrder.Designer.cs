@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPrint = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,21 +43,22 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Delivery_Detail_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IS_Item_Deliver = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Item_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Item_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Item_Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Deliver_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Purchase_Order_Detail_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Printing = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBoxjkj3 = new System.Windows.Forms.GroupBox();
             this.dateTimePickerDeliveryOrderDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.textDeliveryOrderNo = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.ListDeliveryOrder = new System.Windows.Forms.ListBox();
+            this.Delivery_Detail_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IS_Item_Deliver = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Item_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Item_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Item_Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gst_Rate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deliver_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Purchase_Order_Detail_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Printing = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -196,9 +198,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Maroon;
@@ -214,9 +216,9 @@
             this.dataGridView1.AccessibleName = "";
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkGray;
             this.dataGridView1.ColumnHeadersHeight = 70;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -226,93 +228,23 @@
             this.Item_Quantity,
             this.Item_Rate,
             this.Total_Amount,
+            this.Gst_Rate,
             this.Deliver_Quantity,
             this.Purchase_Order_Detail_Id,
             this.Printing});
             this.dataGridView1.Location = new System.Drawing.Point(9, 22);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Purple;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Purple;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.Size = new System.Drawing.Size(696, 427);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Delivery_Detail_Id
-            // 
-            this.Delivery_Detail_Id.HeaderText = "Delivery_Detail_Id";
-            this.Delivery_Detail_Id.Name = "Delivery_Detail_Id";
-            this.Delivery_Detail_Id.ReadOnly = true;
-            this.Delivery_Detail_Id.Visible = false;
-            // 
-            // IS_Item_Deliver
-            // 
-            this.IS_Item_Deliver.HeaderText = "IS Item Deliver";
-            this.IS_Item_Deliver.MinimumWidth = 60;
-            this.IS_Item_Deliver.Name = "IS_Item_Deliver";
-            this.IS_Item_Deliver.Width = 60;
-            // 
-            // Item_Name
-            // 
-            this.Item_Name.HeaderText = "Item Name";
-            this.Item_Name.MinimumWidth = 150;
-            this.Item_Name.Name = "Item_Name";
-            this.Item_Name.ReadOnly = true;
-            this.Item_Name.Width = 150;
-            // 
-            // Item_Quantity
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Purple;
-            this.Item_Quantity.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Item_Quantity.HeaderText = "Item Quantity";
-            this.Item_Quantity.MinimumWidth = 100;
-            this.Item_Quantity.Name = "Item_Quantity";
-            this.Item_Quantity.ReadOnly = true;
-            // 
-            // Item_Rate
-            // 
-            this.Item_Rate.HeaderText = "Item Rate";
-            this.Item_Rate.MinimumWidth = 50;
-            this.Item_Rate.Name = "Item_Rate";
-            this.Item_Rate.ReadOnly = true;
-            this.Item_Rate.Width = 60;
-            // 
-            // Total_Amount
-            // 
-            this.Total_Amount.HeaderText = "Total Amount";
-            this.Total_Amount.MinimumWidth = 80;
-            this.Total_Amount.Name = "Total_Amount";
-            this.Total_Amount.ReadOnly = true;
-            this.Total_Amount.Width = 80;
-            // 
-            // Deliver_Quantity
-            // 
-            this.Deliver_Quantity.HeaderText = "Deliver Quantity";
-            this.Deliver_Quantity.Name = "Deliver_Quantity";
-            // 
-            // Purchase_Order_Detail_Id
-            // 
-            this.Purchase_Order_Detail_Id.HeaderText = "Purchase_Order_Detail_Id";
-            this.Purchase_Order_Detail_Id.Name = "Purchase_Order_Detail_Id";
-            this.Purchase_Order_Detail_Id.ReadOnly = true;
-            this.Purchase_Order_Detail_Id.Visible = false;
-            // 
-            // Printing
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.Printing.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Printing.HeaderText = "Packaging  Detail";
-            this.Printing.Name = "Printing";
-            this.Printing.Text = "Add";
-            this.Printing.Width = 80;
-            // 
             // groupBoxjkj3
             // 
-            this.groupBoxjkj3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxjkj3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxjkj3.Controls.Add(this.dateTimePickerDeliveryOrderDate);
             this.groupBoxjkj3.Controls.Add(this.label2);
             this.groupBoxjkj3.Controls.Add(this.textDeliveryOrderNo);
@@ -373,8 +305,8 @@
             // 
             // ListDeliveryOrder
             // 
-            this.ListDeliveryOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.ListDeliveryOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ListDeliveryOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListDeliveryOrder.FormattingEnabled = true;
             this.ListDeliveryOrder.ItemHeight = 20;
@@ -382,6 +314,84 @@
             this.ListDeliveryOrder.Name = "ListDeliveryOrder";
             this.ListDeliveryOrder.Size = new System.Drawing.Size(211, 624);
             this.ListDeliveryOrder.TabIndex = 79;
+            // 
+            // Delivery_Detail_Id
+            // 
+            this.Delivery_Detail_Id.HeaderText = "Delivery_Detail_Id";
+            this.Delivery_Detail_Id.Name = "Delivery_Detail_Id";
+            this.Delivery_Detail_Id.ReadOnly = true;
+            this.Delivery_Detail_Id.Visible = false;
+            // 
+            // IS_Item_Deliver
+            // 
+            this.IS_Item_Deliver.HeaderText = "IS Item Deliver";
+            this.IS_Item_Deliver.MinimumWidth = 60;
+            this.IS_Item_Deliver.Name = "IS_Item_Deliver";
+            this.IS_Item_Deliver.Width = 60;
+            // 
+            // Item_Name
+            // 
+            this.Item_Name.HeaderText = "Item Name";
+            this.Item_Name.MinimumWidth = 150;
+            this.Item_Name.Name = "Item_Name";
+            this.Item_Name.ReadOnly = true;
+            this.Item_Name.Width = 150;
+            // 
+            // Item_Quantity
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Purple;
+            this.Item_Quantity.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Item_Quantity.HeaderText = "Item Quantity";
+            this.Item_Quantity.MinimumWidth = 100;
+            this.Item_Quantity.Name = "Item_Quantity";
+            this.Item_Quantity.ReadOnly = true;
+            // 
+            // Item_Rate
+            // 
+            this.Item_Rate.HeaderText = "Item Rate";
+            this.Item_Rate.MinimumWidth = 50;
+            this.Item_Rate.Name = "Item_Rate";
+            this.Item_Rate.ReadOnly = true;
+            this.Item_Rate.Width = 60;
+            // 
+            // Total_Amount
+            // 
+            this.Total_Amount.HeaderText = "Total Amount";
+            this.Total_Amount.MinimumWidth = 80;
+            this.Total_Amount.Name = "Total_Amount";
+            this.Total_Amount.ReadOnly = true;
+            this.Total_Amount.Width = 80;
+            // 
+            // Gst_Rate
+            // 
+            this.Gst_Rate.HeaderText = "GST Rate(%)";
+            this.Gst_Rate.Name = "Gst_Rate";
+            // 
+            // Deliver_Quantity
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            this.Deliver_Quantity.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Deliver_Quantity.HeaderText = "Deliver Quantity";
+            this.Deliver_Quantity.Name = "Deliver_Quantity";
+            // 
+            // Purchase_Order_Detail_Id
+            // 
+            this.Purchase_Order_Detail_Id.HeaderText = "Purchase_Order_Detail_Id";
+            this.Purchase_Order_Detail_Id.Name = "Purchase_Order_Detail_Id";
+            this.Purchase_Order_Detail_Id.ReadOnly = true;
+            this.Purchase_Order_Detail_Id.Visible = false;
+            // 
+            // Printing
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.Printing.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Printing.HeaderText = "Packaging  Detail";
+            this.Printing.Name = "Printing";
+            this.Printing.Text = "Add";
+            this.Printing.Width = 80;
             // 
             // DeliveryOrder
             // 
@@ -428,6 +438,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Item_Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Item_Rate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gst_Rate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Deliver_Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Purchase_Order_Detail_Id;
         private System.Windows.Forms.DataGridViewButtonColumn Printing;
