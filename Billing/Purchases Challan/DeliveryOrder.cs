@@ -344,7 +344,7 @@ namespace PurchasesChallan
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 8)
+            if (e.ColumnIndex == 9)
             {
                 int DeliveryDetailId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Delivery_Detail_Id"].Value);
                 string ItemName = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells["Item_Name"].Value);
