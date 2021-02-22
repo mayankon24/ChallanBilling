@@ -26,7 +26,8 @@ namespace Billing.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=abc-pc;Initial Catalog=BillingChallan;User ID=sa;Password=shiv")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ABC-PC\\SQLEXPRESS;Initial Catalog=BillingChallan;User ID=sa;Password=" +
+            "shiv")]
         public string DataConnectionString1 {
             get {
                 return ((string)(this["DataConnectionString1"]));
