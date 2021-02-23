@@ -320,6 +320,12 @@ namespace Billing {
             
             private global::System.Data.DataColumn columnPurchases_Order_No;
             
+            private global::System.Data.DataColumn columnCGST;
+            
+            private global::System.Data.DataColumn columnSGST;
+            
+            private global::System.Data.DataColumn columnIGST;
+            
             private global::System.Data.DataColumn columnPurchases_Order_Date;
             
             private global::System.Data.DataColumn columncompany_name;
@@ -388,6 +394,30 @@ namespace Billing {
             public global::System.Data.DataColumn Purchases_Order_NoColumn {
                 get {
                     return this.columnPurchases_Order_No;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CGSTColumn {
+                get {
+                    return this.columnCGST;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SGSTColumn {
+                get {
+                    return this.columnSGST;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IGSTColumn {
+                get {
+                    return this.columnIGST;
                 }
             }
             
@@ -484,12 +514,15 @@ namespace Billing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GetReportHeaderRow AddGetReportHeaderRow(string Delivery_No, System.DateTime Delivery_Date, string Purchases_Order_No, System.DateTime Purchases_Order_Date, string company_name, string address1, string pan_no, string tin_no, string delivery_at, int book_no) {
+            public GetReportHeaderRow AddGetReportHeaderRow(string Delivery_No, System.DateTime Delivery_Date, string Purchases_Order_No, double CGST, double SGST, double IGST, System.DateTime Purchases_Order_Date, string company_name, string address1, string pan_no, string tin_no, string delivery_at, int book_no) {
                 GetReportHeaderRow rowGetReportHeaderRow = ((GetReportHeaderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Delivery_No,
                         Delivery_Date,
                         Purchases_Order_No,
+                        CGST,
+                        SGST,
+                        IGST,
                         Purchases_Order_Date,
                         company_name,
                         address1,
@@ -522,6 +555,9 @@ namespace Billing {
                 this.columnDelivery_No = base.Columns["Delivery_No"];
                 this.columnDelivery_Date = base.Columns["Delivery_Date"];
                 this.columnPurchases_Order_No = base.Columns["Purchases_Order_No"];
+                this.columnCGST = base.Columns["CGST"];
+                this.columnSGST = base.Columns["SGST"];
+                this.columnIGST = base.Columns["IGST"];
                 this.columnPurchases_Order_Date = base.Columns["Purchases_Order_Date"];
                 this.columncompany_name = base.Columns["company_name"];
                 this.columnaddress1 = base.Columns["address1"];
@@ -540,6 +576,12 @@ namespace Billing {
                 base.Columns.Add(this.columnDelivery_Date);
                 this.columnPurchases_Order_No = new global::System.Data.DataColumn("Purchases_Order_No", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPurchases_Order_No);
+                this.columnCGST = new global::System.Data.DataColumn("CGST", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCGST);
+                this.columnSGST = new global::System.Data.DataColumn("SGST", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSGST);
+                this.columnIGST = new global::System.Data.DataColumn("IGST", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIGST);
                 this.columnPurchases_Order_Date = new global::System.Data.DataColumn("Purchases_Order_Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPurchases_Order_Date);
                 this.columncompany_name = new global::System.Data.DataColumn("company_name", typeof(string), null, global::System.Data.MappingType.Element);
@@ -563,7 +605,6 @@ namespace Billing {
                 this.columnpan_no.MaxLength = 50;
                 this.columntin_no.MaxLength = 50;
                 this.columndelivery_at.MaxLength = 2000;
-                this.columnbook_no.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1069,6 +1110,54 @@ namespace Billing {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double CGST {
+                get {
+                    try {
+                        return ((double)(this[this.tableGetReportHeader.CGSTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'CGST\' in table \'GetReportHeader\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetReportHeader.CGSTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double SGST {
+                get {
+                    try {
+                        return ((double)(this[this.tableGetReportHeader.SGSTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SGST\' in table \'GetReportHeader\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetReportHeader.SGSTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double IGST {
+                get {
+                    try {
+                        return ((double)(this[this.tableGetReportHeader.IGSTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IGST\' in table \'GetReportHeader\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableGetReportHeader.IGSTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime Purchases_Order_Date {
                 get {
                     try {
@@ -1202,6 +1291,42 @@ namespace Billing {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDelivery_DateNull() {
                 this[this.tableGetReportHeader.Delivery_DateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCGSTNull() {
+                return this.IsNull(this.tableGetReportHeader.CGSTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCGSTNull() {
+                this[this.tableGetReportHeader.CGSTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSGSTNull() {
+                return this.IsNull(this.tableGetReportHeader.SGSTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSGSTNull() {
+                this[this.tableGetReportHeader.SGSTColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsIGSTNull() {
+                return this.IsNull(this.tableGetReportHeader.IGSTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetIGSTNull() {
+                this[this.tableGetReportHeader.IGSTColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1668,6 +1793,9 @@ namespace Billing.DataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("Delivery_No", "Delivery_No");
             tableMapping.ColumnMappings.Add("Delivery_Date", "Delivery_Date");
             tableMapping.ColumnMappings.Add("Purchases_Order_No", "Purchases_Order_No");
+            tableMapping.ColumnMappings.Add("CGST", "CGST");
+            tableMapping.ColumnMappings.Add("SGST", "SGST");
+            tableMapping.ColumnMappings.Add("IGST", "IGST");
             tableMapping.ColumnMappings.Add("Purchases_Order_Date", "Purchases_Order_Date");
             tableMapping.ColumnMappings.Add("company_name", "company_name");
             tableMapping.ColumnMappings.Add("address1", "address1");
@@ -1691,7 +1819,7 @@ namespace Billing.DataSet1TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.GetReportHeader";
+            this._commandCollection[0].CommandText = "GetReportHeader";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Delivery_Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
