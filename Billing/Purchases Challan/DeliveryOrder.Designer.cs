@@ -43,12 +43,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBoxjkj3 = new System.Windows.Forms.GroupBox();
-            this.dateTimePickerDeliveryOrderDate = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textDeliveryOrderNo = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.ListDeliveryOrder = new System.Windows.Forms.ListBox();
             this.Delivery_Detail_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IS_Item_Deliver = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Item_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +53,18 @@
             this.Deliver_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Purchase_Order_Detail_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Printing = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.groupBoxjkj3 = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerDeliveryOrderDate = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textDeliveryOrderNo = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.ListDeliveryOrder = new System.Windows.Forms.ListBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textCGST = new System.Windows.Forms.TextBox();
+            this.textSGST = new System.Windows.Forms.TextBox();
+            this.textIGST = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -241,80 +247,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // groupBoxjkj3
-            // 
-            this.groupBoxjkj3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxjkj3.Controls.Add(this.dateTimePickerDeliveryOrderDate);
-            this.groupBoxjkj3.Controls.Add(this.label2);
-            this.groupBoxjkj3.Controls.Add(this.textDeliveryOrderNo);
-            this.groupBoxjkj3.Controls.Add(this.label18);
-            this.groupBoxjkj3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxjkj3.ForeColor = System.Drawing.Color.IndianRed;
-            this.groupBoxjkj3.Location = new System.Drawing.Point(14, 72);
-            this.groupBoxjkj3.Name = "groupBoxjkj3";
-            this.groupBoxjkj3.Size = new System.Drawing.Size(714, 70);
-            this.groupBoxjkj3.TabIndex = 81;
-            this.groupBoxjkj3.TabStop = false;
-            this.groupBoxjkj3.Text = "Delivery Order";
-            // 
-            // dateTimePickerDeliveryOrderDate
-            // 
-            this.dateTimePickerDeliveryOrderDate.CustomFormat = "dd / MM / yyyy";
-            this.dateTimePickerDeliveryOrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerDeliveryOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerDeliveryOrderDate.Location = new System.Drawing.Point(83, 31);
-            this.dateTimePickerDeliveryOrderDate.Name = "dateTimePickerDeliveryOrderDate";
-            this.dateTimePickerDeliveryOrderDate.Size = new System.Drawing.Size(121, 20);
-            this.dateTimePickerDeliveryOrderDate.TabIndex = 77;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(283, 35);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 17);
-            this.label2.TabIndex = 74;
-            this.label2.Text = "Delivery Order No ";
-            // 
-            // textDeliveryOrderNo
-            // 
-            this.textDeliveryOrderNo.BackColor = System.Drawing.Color.PowderBlue;
-            this.textDeliveryOrderNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textDeliveryOrderNo.ForeColor = System.Drawing.Color.Black;
-            this.textDeliveryOrderNo.Location = new System.Drawing.Point(430, 32);
-            this.textDeliveryOrderNo.Margin = new System.Windows.Forms.Padding(2);
-            this.textDeliveryOrderNo.Name = "textDeliveryOrderNo";
-            this.textDeliveryOrderNo.Size = new System.Drawing.Size(137, 23);
-            this.textDeliveryOrderNo.TabIndex = 73;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(26, 34);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(38, 17);
-            this.label18.TabIndex = 63;
-            this.label18.Text = "Date";
-            // 
-            // ListDeliveryOrder
-            // 
-            this.ListDeliveryOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ListDeliveryOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListDeliveryOrder.FormattingEnabled = true;
-            this.ListDeliveryOrder.ItemHeight = 20;
-            this.ListDeliveryOrder.Location = new System.Drawing.Point(734, 42);
-            this.ListDeliveryOrder.Name = "ListDeliveryOrder";
-            this.ListDeliveryOrder.Size = new System.Drawing.Size(211, 624);
-            this.ListDeliveryOrder.TabIndex = 79;
-            // 
             // Delivery_Detail_Id
             // 
             this.Delivery_Detail_Id.HeaderText = "Delivery_Detail_Id";
@@ -393,6 +325,143 @@
             this.Printing.Text = "Add";
             this.Printing.Width = 80;
             // 
+            // groupBoxjkj3
+            // 
+            this.groupBoxjkj3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxjkj3.Controls.Add(this.textIGST);
+            this.groupBoxjkj3.Controls.Add(this.textSGST);
+            this.groupBoxjkj3.Controls.Add(this.textCGST);
+            this.groupBoxjkj3.Controls.Add(this.label5);
+            this.groupBoxjkj3.Controls.Add(this.label4);
+            this.groupBoxjkj3.Controls.Add(this.label3);
+            this.groupBoxjkj3.Controls.Add(this.dateTimePickerDeliveryOrderDate);
+            this.groupBoxjkj3.Controls.Add(this.label2);
+            this.groupBoxjkj3.Controls.Add(this.textDeliveryOrderNo);
+            this.groupBoxjkj3.Controls.Add(this.label18);
+            this.groupBoxjkj3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxjkj3.ForeColor = System.Drawing.Color.IndianRed;
+            this.groupBoxjkj3.Location = new System.Drawing.Point(14, 72);
+            this.groupBoxjkj3.Name = "groupBoxjkj3";
+            this.groupBoxjkj3.Size = new System.Drawing.Size(714, 70);
+            this.groupBoxjkj3.TabIndex = 81;
+            this.groupBoxjkj3.TabStop = false;
+            this.groupBoxjkj3.Text = "Delivery Order";
+            // 
+            // dateTimePickerDeliveryOrderDate
+            // 
+            this.dateTimePickerDeliveryOrderDate.CustomFormat = "dd / MM / yyyy";
+            this.dateTimePickerDeliveryOrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerDeliveryOrderDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerDeliveryOrderDate.Location = new System.Drawing.Point(29, 34);
+            this.dateTimePickerDeliveryOrderDate.Name = "dateTimePickerDeliveryOrderDate";
+            this.dateTimePickerDeliveryOrderDate.Size = new System.Drawing.Size(121, 20);
+            this.dateTimePickerDeliveryOrderDate.TabIndex = 77;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(176, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 17);
+            this.label2.TabIndex = 74;
+            this.label2.Text = "Delivery Order No ";
+            // 
+            // textDeliveryOrderNo
+            // 
+            this.textDeliveryOrderNo.BackColor = System.Drawing.Color.PowderBlue;
+            this.textDeliveryOrderNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textDeliveryOrderNo.ForeColor = System.Drawing.Color.Black;
+            this.textDeliveryOrderNo.Location = new System.Drawing.Point(179, 35);
+            this.textDeliveryOrderNo.Margin = new System.Windows.Forms.Padding(2);
+            this.textDeliveryOrderNo.Name = "textDeliveryOrderNo";
+            this.textDeliveryOrderNo.Size = new System.Drawing.Size(137, 23);
+            this.textDeliveryOrderNo.TabIndex = 73;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(55, 16);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(38, 17);
+            this.label18.TabIndex = 63;
+            this.label18.Text = "Date";
+            // 
+            // ListDeliveryOrder
+            // 
+            this.ListDeliveryOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ListDeliveryOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListDeliveryOrder.FormattingEnabled = true;
+            this.ListDeliveryOrder.ItemHeight = 20;
+            this.ListDeliveryOrder.Location = new System.Drawing.Point(734, 42);
+            this.ListDeliveryOrder.Name = "ListDeliveryOrder";
+            this.ListDeliveryOrder.Size = new System.Drawing.Size(211, 624);
+            this.ListDeliveryOrder.TabIndex = 79;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(375, 16);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 17);
+            this.label3.TabIndex = 78;
+            this.label3.Text = "CGST";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(501, 16);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.TabIndex = 79;
+            this.label4.Text = "SGST";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(635, 16);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 17);
+            this.label5.TabIndex = 80;
+            this.label5.Text = "IGST";
+            // 
+            // textCGST
+            // 
+            this.textCGST.Location = new System.Drawing.Point(352, 36);
+            this.textCGST.Name = "textCGST";
+            this.textCGST.Size = new System.Drawing.Size(100, 20);
+            this.textCGST.TabIndex = 81;
+            // 
+            // textSGST
+            // 
+            this.textSGST.Location = new System.Drawing.Point(476, 36);
+            this.textSGST.Name = "textSGST";
+            this.textSGST.Size = new System.Drawing.Size(100, 20);
+            this.textSGST.TabIndex = 82;
+            // 
+            // textIGST
+            // 
+            this.textIGST.Location = new System.Drawing.Point(608, 36);
+            this.textIGST.Name = "textIGST";
+            this.textIGST.Size = new System.Drawing.Size(100, 20);
+            this.textIGST.TabIndex = 83;
+            // 
             // DeliveryOrder
             // 
             this.AccessibleName = "";
@@ -442,5 +511,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Deliver_Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Purchase_Order_Detail_Id;
         private System.Windows.Forms.DataGridViewButtonColumn Printing;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textIGST;
+        private System.Windows.Forms.TextBox textSGST;
+        private System.Windows.Forms.TextBox textCGST;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -60,6 +60,9 @@ namespace PurchasesChallan
                 DeliveryOrderDL objDeliveryOrderDL = new DeliveryOrderDL();
 
                 string DeliveryOrderNo = "";
+                string CGST = "";
+                string SGST = "";
+                string IGST = "";
                 if (textDeliveryOrderNo.Text.Trim() != "")
                 {
                     try
@@ -72,7 +75,43 @@ namespace PurchasesChallan
                         return;
                     }                  
                 }
-                
+                if (textCGST.Text.Trim() != "")
+                {
+                    try
+                    {
+                        CGST = Convert.ToInt64(textCGST.Text).ToString();
+                    }
+                    catch (Exception)
+                    {
+                        Common.MessageAlert("Please enter integer value for CGST");
+                        return;
+                    }
+                }
+                if (textSGST.Text.Trim() != "")
+                {
+                    try
+                    {
+                        SGST = Convert.ToInt64(textSGST.Text).ToString();
+                    }
+                    catch (Exception)
+                    {
+                        Common.MessageAlert("Please enter integer value for SGST");
+                        return;
+                    }
+                }
+                if (textIGST.Text.Trim() != "")
+                {
+                    try
+                    {
+                        IGST = Convert.ToInt64(textIGST.Text).ToString();
+                    }
+                    catch (Exception)
+                    {
+                        Common.MessageAlert("Please enter integer value for IGST");
+                        return;
+                    }
+                }
+
                 DateTime DeliveryOrderDate = dateTimePickerDeliveryOrderDate.Value;
                 DataTable dt = new DataTable();
                 dt.Columns.Add("Purchase_Order_Detail_Id", typeof(int));
@@ -101,7 +140,7 @@ namespace PurchasesChallan
 
                 if (dt.Rows.Count > 0)
                 {
-                    objDeliveryOrderDL.Insert(objSqlTransaction, companyEL.Company_id, companyEL.Company_Type_Id, purchaseOrderEL.Purchases_Order_Id, DeliveryOrderDate, DeliveryOrderNo, dt);
+                    objDeliveryOrderDL.Insert(objSqlTransaction, companyEL.Company_id, companyEL.Company_Type_Id, purchaseOrderEL.Purchases_Order_Id, DeliveryOrderDate, DeliveryOrderNo, CGST, SGST, IGST, dt);
                     objSqlTransaction.Commit();
                     Common.MessageSave();
                     FillListBox();
@@ -113,7 +152,7 @@ namespace PurchasesChallan
                 }
 
             }
-            catch
+            catch(Exception ex)
             {
                 objSqlTransaction.Rollback();
                 Common.MessageAlert("First enter data in correct format");
@@ -126,6 +165,46 @@ namespace PurchasesChallan
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            string CGST = "";
+            string SGST = "";
+            string IGST = "";
+            if (textCGST.Text.Trim() != "")
+            {
+                try
+                {
+                    CGST = Convert.ToInt64(textCGST.Text).ToString();
+                }
+                catch (Exception)
+                {
+                    Common.MessageAlert("Please enter integer value for CGST");
+                    return;
+                }
+            }
+            if (textSGST.Text.Trim() != "")
+            {
+                try
+                {
+                    SGST = Convert.ToInt64(textSGST.Text).ToString();
+                }
+                catch (Exception)
+                {
+                    Common.MessageAlert("Please enter integer value for SGST");
+                    return;
+                }
+            }
+            if (textIGST.Text.Trim() != "")
+            {
+                try
+                {
+                    IGST = Convert.ToInt64(textIGST.Text).ToString();
+                }
+                catch (Exception)
+                {
+                    Common.MessageAlert("Please enter integer value for IGST");
+                    return;
+                }
+            }
+
             SQLHelper objSQLHelper = new SQLHelper();
             SqlTransaction objSqlTransaction = objSQLHelper.BeginTrans();
             try
@@ -164,7 +243,7 @@ namespace PurchasesChallan
 
                     if (dt.Rows.Count > 0)
                     {
-                        objDeliveryOrderDL.Update(objSqlTransaction, DeliveryOrderId,  dt);
+                        objDeliveryOrderDL.Update(objSqlTransaction, DeliveryOrderId, CGST, SGST, IGST,  dt);
                         objSqlTransaction.Commit();
                         Common.MessageSave();
                         FillListBox();
@@ -309,6 +388,9 @@ namespace PurchasesChallan
                 DataTable dt = objDeliveryOrderDL.GetDeliveryOrderDetail(DeliveryOrderId, purchaseOrderEL.Purchases_Order_Id);
 
                 textDeliveryOrderNo.Text = objDeliveryOrderDL.DeliveryOrderNo;
+                textCGST.Text = objDeliveryOrderDL.CGST.ToString();
+                textSGST.Text = objDeliveryOrderDL.SGST.ToString();
+                textIGST.Text = objDeliveryOrderDL.IGST.ToString();
                 dateTimePickerDeliveryOrderDate.Value = objDeliveryOrderDL.DeliveryDate;
 
 
@@ -338,8 +420,9 @@ namespace PurchasesChallan
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                Console.Write(ex.Message);
             }
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -360,8 +443,9 @@ namespace PurchasesChallan
 
             }
         }
+
         #endregion
 
-     
+        
     }
 }

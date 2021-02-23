@@ -16,17 +16,20 @@ namespace PurchasesChallan.DataLayer
         public string DeliveryOrderNo { get; set; }
         public int companyId { get; set; }
         public DateTime DeliveryDate { get; set; }
-       
+        public float CGST { get; set; }
+        public float SGST { get; set; }
+        public float IGST { get; set; }
+
         #endregion
 
         public DeliveryOrderDL()
         {
             DeliveryOrderNo = string.Empty;
             companyId = -1;
-            DeliveryDate = DateTime.Now;
+            DeliveryDate = DateTime.Now;           
         }
 
-        public void Insert(SqlTransaction objSqlTransaction, int companyId, int companyTypeId, int purchasesOrderId, DateTime date, string DeliveryOrderNo, DataTable dt)
+        public void Insert(SqlTransaction objSqlTransaction, int companyId, int companyTypeId, int purchasesOrderId, DateTime date, string DeliveryOrderNo, string CGST, string SGST, string IGST, DataTable dt)
         {
 
             SQLHelper objSQLHelper = new SQLHelper();
@@ -35,7 +38,10 @@ namespace PurchasesChallan.DataLayer
                                                      , objSQLHelper.SqlParam("@Company_Type_Id", companyTypeId, SqlDbType.Int)
                                                      , objSQLHelper.SqlParam("@purchases_order_id", purchasesOrderId, SqlDbType.Int)
                                                      , objSQLHelper.SqlParam("@delivery_date", date, SqlDbType.DateTime)
-                                                     , objSQLHelper.SqlParam("@delivery_no", DeliveryOrderNo, SqlDbType.NVarChar)
+                                                     , objSQLHelper.SqlParam("@delivery_no", DeliveryOrderNo, SqlDbType.Float)
+                                                     , objSQLHelper.SqlParam("@CGST", CGST, SqlDbType.Float)
+                                                     , objSQLHelper.SqlParam("@SGST", SGST, SqlDbType.Float)
+                                                     , objSQLHelper.SqlParam("@IGST", IGST, SqlDbType.Float)
                                                     );
 
 
@@ -57,9 +63,18 @@ namespace PurchasesChallan.DataLayer
             }
 
         }
-        public void Update(SqlTransaction objSqlTransaction, int deliveryOrderId, DataTable dt)
+        public void Update(SqlTransaction objSqlTransaction, int deliveryOrderId, string CGST, string SGST, string IGST, DataTable dt)
         {
             SQLHelper objSQLHelper = new SQLHelper();
+
+            objSQLHelper.ExecuteUpdateProcedure("UpdateDeliveryTax", objSqlTransaction
+                                                , objSQLHelper.SqlParam("@Delivery_Id", deliveryOrderId, SqlDbType.Int)                                               
+                                                , objSQLHelper.SqlParam("@CGST", CGST, SqlDbType.Float)
+                                                , objSQLHelper.SqlParam("@SGST", SGST, SqlDbType.Float)
+                                                , objSQLHelper.SqlParam("@IGST", IGST, SqlDbType.Float)
+                                            );
+
+            
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 int DeliveryDetailId = Convert.ToInt32(dt.Rows[i]["Delivery_Detail_Id"]);
@@ -164,6 +179,9 @@ namespace PurchasesChallan.DataLayer
                 {
                     DeliveryOrderNo = dt.Rows[0]["Delivery_no"].ToString();
                     DeliveryDate = Convert.ToDateTime(dt.Rows[0]["Delivery_Date"]);
+                    CGST = (float)Convert.ToDouble(dt.Rows[0]["CGST"]);
+                    SGST = (float)Convert.ToDouble(dt.Rows[0]["SGST"]);
+                    IGST = (float)Convert.ToDouble(dt.Rows[0]["IGST"]);
                 }
 
             }
