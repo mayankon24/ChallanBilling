@@ -60,9 +60,9 @@ namespace PurchasesChallan
                 DeliveryOrderDL objDeliveryOrderDL = new DeliveryOrderDL();
 
                 string DeliveryOrderNo = "";
-                string CGST = "";
-                string SGST = "";
-                string IGST = "";
+                double CGST =0;
+                double SGST = 0;
+                double IGST = 0;
                 if (textDeliveryOrderNo.Text.Trim() != "")
                 {
                     try
@@ -79,7 +79,7 @@ namespace PurchasesChallan
                 {
                     try
                     {
-                        CGST = Convert.ToInt64(textCGST.Text).ToString();
+                        CGST = Convert.ToDouble(textCGST.Text);
                     }
                     catch (Exception)
                     {
@@ -91,7 +91,7 @@ namespace PurchasesChallan
                 {
                     try
                     {
-                        SGST = Convert.ToInt64(textSGST.Text).ToString();
+                        SGST = Convert.ToDouble(textSGST.Text);
                     }
                     catch (Exception)
                     {
@@ -103,7 +103,7 @@ namespace PurchasesChallan
                 {
                     try
                     {
-                        IGST = Convert.ToInt64(textIGST.Text).ToString();
+                        IGST = Convert.ToDouble(textIGST.Text);
                     }
                     catch (Exception)
                     {
@@ -165,14 +165,14 @@ namespace PurchasesChallan
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string CGST = "";
-            string SGST = "";
-            string IGST = "";
+            double CGST = 0;
+            double SGST = 0;
+            double IGST = 0;
             if (textCGST.Text.Trim() != "")
             {
                 try
                 {
-                    CGST = Convert.ToInt64(textCGST.Text).ToString();
+                    CGST = Convert.ToDouble(textCGST.Text);
                 }
                 catch (Exception)
                 {
@@ -184,7 +184,7 @@ namespace PurchasesChallan
             {
                 try
                 {
-                    SGST = Convert.ToInt64(textSGST.Text).ToString();
+                    SGST = Convert.ToDouble(textSGST.Text);
                 }
                 catch (Exception)
                 {
@@ -196,7 +196,7 @@ namespace PurchasesChallan
             {
                 try
                 {
-                    IGST = Convert.ToInt64(textIGST.Text).ToString();
+                    IGST = Convert.ToDouble(textIGST.Text);
                 }
                 catch (Exception)
                 {

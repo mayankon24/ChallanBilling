@@ -29,7 +29,7 @@ namespace PurchasesChallan.DataLayer
             DeliveryDate = DateTime.Now;           
         }
 
-        public void Insert(SqlTransaction objSqlTransaction, int companyId, int companyTypeId, int purchasesOrderId, DateTime date, string DeliveryOrderNo, string CGST, string SGST, string IGST, DataTable dt)
+        public void Insert(SqlTransaction objSqlTransaction, int companyId, int companyTypeId, int purchasesOrderId, DateTime date, string DeliveryOrderNo, double CGST, double SGST, double IGST, DataTable dt)
         {
 
             SQLHelper objSQLHelper = new SQLHelper();
@@ -38,7 +38,7 @@ namespace PurchasesChallan.DataLayer
                                                      , objSQLHelper.SqlParam("@Company_Type_Id", companyTypeId, SqlDbType.Int)
                                                      , objSQLHelper.SqlParam("@purchases_order_id", purchasesOrderId, SqlDbType.Int)
                                                      , objSQLHelper.SqlParam("@delivery_date", date, SqlDbType.DateTime)
-                                                     , objSQLHelper.SqlParam("@delivery_no", DeliveryOrderNo, SqlDbType.Float)
+                                                     , objSQLHelper.SqlParam("@delivery_no", DeliveryOrderNo, SqlDbType.NVarChar)                                          
                                                      , objSQLHelper.SqlParam("@CGST", CGST, SqlDbType.Float)
                                                      , objSQLHelper.SqlParam("@SGST", SGST, SqlDbType.Float)
                                                      , objSQLHelper.SqlParam("@IGST", IGST, SqlDbType.Float)
@@ -63,7 +63,7 @@ namespace PurchasesChallan.DataLayer
             }
 
         }
-        public void Update(SqlTransaction objSqlTransaction, int deliveryOrderId, string CGST, string SGST, string IGST, DataTable dt)
+        public void Update(SqlTransaction objSqlTransaction, int deliveryOrderId, double CGST, double SGST, double IGST, DataTable dt)
         {
             SQLHelper objSQLHelper = new SQLHelper();
 
